@@ -1,5 +1,5 @@
-namespace Escambo.Domain.Entities;
-public sealed class PrestacaoServico: BaseEntity
+namespace Escambo.WebAPI.Model;
+public sealed class PrestacaoServico
 {
     
     public int ServiçoId { get; set; }
@@ -16,10 +16,11 @@ public sealed class PrestacaoServico: BaseEntity
 
 
     public int ContratanteId { get; set; }//Contratante
-    public  Usuario Contratante  { get; set; }//Contratante
+    public  Usuario? Contratante  { get; set; }//Contratante
 
     public int PrestadorId {get;set;}//Prestador 
     public Usuario? Prestador { get; set; }
-   
 
+    public ICollection<Avaliacao> Avaliacoes {get;} = new List<Avaliacao>();
+   
 }

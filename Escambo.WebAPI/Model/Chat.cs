@@ -1,5 +1,5 @@
-namespace Escambo.Domain.Entities;
-public sealed class Chat : BaseEntity
+namespace Escambo.WebAPI.Model;
+public sealed class Chat 
 {
     
     public int ChatId { get; set; }

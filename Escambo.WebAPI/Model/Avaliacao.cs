@@ -1,8 +1,8 @@
-namespace Escambo.Domain.Entities;
+namespace Escambo.WebAPI.Model;
 
-public sealed class Avalicao: BaseEntity //avaliação
+public sealed class Avaliacao//avaliação
 {
-    public int AvalicaoId { get; set; }
+    public int AvaliacaoId { get; set; }
     // anuncio referencia para o entity criar o relacionamento
     public int PrestacaoServicoId { get; set; } 
     public required PrestacaoServico PrestacaoServico { get; set; } 

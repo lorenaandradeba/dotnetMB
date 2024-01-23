@@ -1,5 +1,5 @@
-namespace Escambo.Domain.Entities;
-public sealed class Usuario: BaseEntity 
+namespace Escambo.WebAPI.Model;
+public sealed class Usuario
 {
     public int UsuarioId { get; set; }
     public string? Nome { get; set; } //nome
@@ -11,7 +11,8 @@ public sealed class Usuario: BaseEntity
     public string? Endereço {get; set;} //endereço
     public int Status {get;set;} 
     public decimal Credito {get;set;} //credito
-    public ICollection<Advertisement> Anúncios {get;} = new List<Advertisement>();
-    public ICollection<Avaluation>? Avaliação { get; set; } //Avaliações como avaliador
 
+    public ICollection<PrestacaoServico> PrestacaoServiços {get;} = new List<PrestacaoServico>();
+    public ICollection<Chat> Chats { get; set; }
+    public ICollection<Anuncio> Anuncios {get;} = new List<Anuncio>();
 }

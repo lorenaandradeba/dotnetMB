@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Escambo.Domain.Entities
+namespace Escambo.WebAPI.Model
 {
-    public class Anuncio: BaseEntity //Tabela Anuncio 
+    public class Anuncio //Tabela Anuncio 
     {
         public int AnuncioId { get; set; }
         public required string Nome { get; set; }
