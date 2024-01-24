@@ -53,6 +53,7 @@ public class AnuncioController : ControllerBase
     {
         return CreatedAtAction(nameof(GetById), new { id = 1 }, anuncio);
     }
+    
     [HttpPut("anuncio/{id}")]
    public IActionResult Put(int id, [FromBody] Anuncio anuncio)
    {
