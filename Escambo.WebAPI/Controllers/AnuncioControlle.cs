@@ -31,8 +31,8 @@ public class AnuncioControlle : ControllerBase
         return Ok(anuncios);
     }
     [HttpGet]
-    [Route("anuncios")]
-    public IActionResult GetAtendimento(int id)
+    [Route("anuncio/{id}")]
+    public IActionResult GetById(int id)
     {
         var usuario = new Usuario
         {
@@ -48,9 +48,24 @@ public class AnuncioControlle : ControllerBase
       return Ok(anuncio);
    }
     [HttpPost]
-    [Route("anuncio/cadastro")]
+    [Route("anuncio")]
     public IActionResult Post([FromBody] Anuncio anuncio)
     {
-        return Ok(anuncio.ToString());
+        return CreatedAtAction(nameof(GetById), new { id = 1 }, anuncio);
     }
+    [HttpPut("anuncio/{id}")]
+   public IActionResult Put(int id, [FromBody] Anuncio anuncio)
+   {
+      //TODO: Buscar um anuncio pelo id e atualizar os dados
+      // caso não encontre, retorna NotFound()
+      return NoContent();
+   }
+
+   [HttpDelete("anuncio/{id}")]
+   public IActionResult Delete(int id)
+   {
+      //TODO: Buscar um anuncio pelo id e apagar
+      // caso não encontre, retorna NotFound()
+      return NoContent();
+   }
 }

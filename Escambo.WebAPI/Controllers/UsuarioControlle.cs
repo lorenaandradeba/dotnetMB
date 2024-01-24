@@ -27,4 +27,22 @@ public class UsuarioController : ControllerBase
     public IActionResult Post([FromBody] Usuario usuario){
         return Ok(usuario.ToString());
     }
+
+   [HttpGet("usuario/{id}/anuncios")]
+   public IActionResult GetAnuncios(int id)
+   {
+      var anuncio = Enumerable.Range(1, 5).Select(index => new Anuncio
+        {
+            AnuncioId = index,
+            Nome = "Corte de Cabelo",
+            UsuarioId = id,
+            Usuario = new Usuario
+            {
+                UsuarioId = id,
+                Nome = $"Usuario {id}"
+            }
+        })
+        .ToArray();
+      return Ok(anuncio);
+   }
 }
