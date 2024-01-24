@@ -9,12 +9,12 @@ namespace Escambo.WebAPI.Controllers;
 
 [ApiController]
 [Route("/api/v0.1/")]
-public class AnuncioControlle : ControllerBase
+public class AnuncioController : ControllerBase
 {
 
     [HttpGet]
-    [Route("anuncio/{id}")]
-    public IActionResult Get(int id)
+    [Route("anuncios")]
+    public IActionResult GetAll()
     {
         var usuario = new Usuario
         {
