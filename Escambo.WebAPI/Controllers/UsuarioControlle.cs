@@ -4,7 +4,7 @@ using Escambo.WebAPI.Model;
 namespace Escambo.WebAPI.Controllers;
 
 [ApiController]
-[Route("api/")]
+[Route("/api/v0.1/")]
 public class UsuarioController : ControllerBase
 {
     
