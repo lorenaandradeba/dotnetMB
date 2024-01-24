@@ -1,16 +1,13 @@
 namespace Escambo.WebAPI.Model;
 public sealed class PrestacaoServico
 {
-    
-    public int ServiçoId { get; set; }
-    public string? Descrição{get; set;} //descrição
-    public string? Categoria {get;set;} //categoria
-    public string? Tipo {get;set;} //tip
-
+    public int PrestacaoId { get; set; }
+    public int AnuncioId { get; set; }
     public int Status {get;set;} //estatus do pedido ?
     public string? Duração {get;set;} // tempo estimado de duração
 
-    public DateTime Data {get;set;} //data para inicio
+    public required DateTime DataInicio {get;set;} 
+    public DateTime? DataTermino {get;set;} 
 
     public Decimal Credito {get;set;} //troca ofertada 
 
