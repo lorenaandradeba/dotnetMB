@@ -13,6 +13,6 @@ public sealed class Usuario
     public decimal Credito {get;set;} //credito
 
     public ICollection<PrestacaoServico> PrestacaoServiços {get;} = new List<PrestacaoServico>();
-    public ICollection<Chat>? Chats { get; set; }
+    public ICollection<Chat>? Chats { get; }= new List<Chat>();
     public ICollection<Anuncio> Anuncios {get;} = new List<Anuncio>();
 }
