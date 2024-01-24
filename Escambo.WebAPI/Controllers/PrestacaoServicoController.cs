@@ -16,21 +16,70 @@ namespace Escambo.WebAPI.Controllers
     [HttpGet]
     [Route("prestacoes")]
     public IActionResult GetAll()
-    {
+    {   
 
+        var usuarioPrestador = new Usuario
+        {
+            UsuarioId = 1,
+            Nome = "Prestador 1"
+        };
+
+        var usuarioContratante = new Usuario
+        {
+            UsuarioId = 2,
+            Nome = "Contratante 1"
+        };
+
+        var prestacoes =Enumerable.Range(1, 5).Select(index => new PrestacaoServico
+        {
+            AnuncioId = index,
+            Status = 0,//Aceito
+            DataInicio = DateTime.Now,
+            ContratanteId = usuarioContratante.UsuarioId,
+            Contratante = usuarioContratante,
+            PrestadorId = usuarioPrestador.UsuarioId,
+            Prestador = usuarioPrestador
+        })
+          .ToArray();
+        return Ok(prestacoes);
+        
     }
 
     [HttpGet]
     [Route("prestacao/{id}")]
     public IActionResult GetById(int id)
     {
+         var usuarioPrestador = new Usuario
+        {
+            UsuarioId = 1,
+            Nome = "Prestador 1"
+        };
+
+        var usuarioContratante = new Usuario
+        {
+            UsuarioId = 2,
+            Nome = "Contratante 1"
+        };
+
+        var prestacao = new PrestacaoServico
+        {
+            PrestacaoId = id,
+            AnuncioId = 1,
+            Status = 0,//Aceito
+            DataInicio = DateTime.Now,
+            ContratanteId = usuarioContratante.UsuarioId,
+            Contratante = usuarioContratante,
+            PrestadorId = usuarioPrestador.UsuarioId,
+            Prestador = usuarioPrestador
+        };
+        return Ok(prestacao);
     }
 
     [HttpPost]
     [Route("prestacao")]
     public IActionResult Post([FromBody] PrestacaoServico prestacao)
     {
-
+        return CreatedAtAction(nameof(GetById), new { id = 1 }, prestacao);
     }
 
     [HttpPut("prestacao/{id}")]
