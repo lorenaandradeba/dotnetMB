@@ -12,14 +12,14 @@ public sealed class PrestacaoServico
 
     public DateTime Data {get;set;} //data para inicio
 
-    public Decimal Credito {get;set;} //troca ofertada 
+    public decimal Credito {get;set;} //troca ofertada 
 
 
     public int ContratanteId { get; set; }//Contratante
-    public  Usuario? Contratante  { get; set; }//Contratante
+    public  Usuario Contratante  { get; set; }//Contratante
 
     public int PrestadorId {get;set;}//Prestador 
-    public Usuario? Prestador { get; set; }
+    public Usuario Prestador { get; set; }
 
     public ICollection<Avaliacao> Avaliacoes {get;} = new List<Avaliacao>();
    

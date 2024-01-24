@@ -27,4 +27,19 @@ public class UsuarioController : ControllerBase
     public IActionResult Post([FromBody] Usuario usuario){
         return Ok(usuario.ToString());
     }
+
+    [HttpDelete]
+    [Route("usuario/{id}")]
+    public IActionResult Delete(int id)
+    {
+        return Ok();
+    }
+
+    [HttpPut]
+    [Route("usuario/{id}")]
+    public IActionResult Put(int id, [FromBody] Usuario usuario)
+    {
+        return Ok();
+    }
+
 }
