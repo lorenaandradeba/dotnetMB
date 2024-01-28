@@ -1,4 +1,4 @@
-namespace Escambo.Domain.Entities;
+namespace Escambo.Core.Model;
 
 public abstract class BaseEntity
 {

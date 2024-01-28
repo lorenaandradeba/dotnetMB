@@ -1,7 +1,8 @@
-namespace Escambo.WebAPI.Model;
+namespace Escambo.Core.Model;
 public sealed class PrestacaoServico
 {
     
+    public int PrestacaoServicoId { get; set; }
     public int ServiçoId { get; set; }
     public string? Descrição{get; set;} //descrição
     public string? Categoria {get;set;} //categoria
@@ -22,5 +23,9 @@ public sealed class PrestacaoServico
     public Usuario? Prestador { get; set; }
 
     public ICollection<Avaliacao> Avaliacoes {get;} = new List<Avaliacao>();
+    public int AnuncioIdAnuncio { get; set; }
+    public Anuncio? Anuncio { get; set; }
+    public ICollection<PrestacaoServicoHasAvaliacoes>? PrestacaoServicoHasAvaliacoes { get; set; }
+    public ICollection<PrestacaoServicoHasUsuarios>? PrestacaoServicoHasUsuarios { get; set; }
    
 }
