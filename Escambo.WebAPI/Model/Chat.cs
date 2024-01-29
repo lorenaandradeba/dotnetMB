@@ -11,5 +11,5 @@ public sealed class Chat
     public int RemetenteId { get; set; } //remetente
     public required Usuario Remetente { get; set; }
 
-    ICollection<Mensagem> Mensagens { get; set; }
+    ICollection<Mensagem>? Mensagens { get; set; }
 }
