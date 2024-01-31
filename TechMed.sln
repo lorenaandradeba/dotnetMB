@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechMed.Dommain", "TechMed.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechMed.Infra", "TechMed.Infra\TechMed.Infra.csproj", "{267BD384-1560-48F0-A9BA-77AAA0F49D47}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechMed.Aplication", "TechMed.Aplication\TechMed.Aplication.csproj", "{430E3004-DC8E-4143-A0C2-D6EBE603BA7C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{267BD384-1560-48F0-A9BA-77AAA0F49D47}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{267BD384-1560-48F0-A9BA-77AAA0F49D47}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{267BD384-1560-48F0-A9BA-77AAA0F49D47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{430E3004-DC8E-4143-A0C2-D6EBE603BA7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{430E3004-DC8E-4143-A0C2-D6EBE603BA7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{430E3004-DC8E-4143-A0C2-D6EBE603BA7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{430E3004-DC8E-4143-A0C2-D6EBE603BA7C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
