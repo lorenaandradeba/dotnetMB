@@ -82,7 +82,6 @@ namespace TechMed.Aplication.Services
             };
             return MedicoViewModel;
         }
-
         public void Update(int id, NewMedicoInputModel medico)
         {
             var _medico = GetByDbId(id);

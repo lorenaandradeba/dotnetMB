@@ -4,7 +4,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using TechMed.Aplication.InputModel;
 using TechMed.Aplication.ViewModel;
-using TechMed.Dommain.Entities;
 
 namespace TechMed.Aplication.Services.Interfaces
 {

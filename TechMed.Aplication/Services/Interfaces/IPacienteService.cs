@@ -8,6 +8,7 @@ namespace TechMed.Aplication.Services.Interfaces
 {
     public interface IPacienteService
     {
+      
       public List<PacienteViewModel> GetAll();
       public PacienteViewModel? GetById(int id);
       public int Create(NewPacienteInputModel paciente);

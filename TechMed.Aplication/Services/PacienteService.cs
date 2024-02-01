@@ -46,6 +46,7 @@ namespace TechMed.Aplication.Services
             };
             return PacienteViewModel;
         }
+        
         public int Create(NewPacienteInputModel paciente)
         {
             var _paciente = new Paciente
