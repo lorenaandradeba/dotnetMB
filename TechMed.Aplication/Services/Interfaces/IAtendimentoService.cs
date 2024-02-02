@@ -14,5 +14,6 @@ namespace TechMed.Aplication.Services.Interfaces
         public List<AtendimentoViewModel> GetByPacienteId(int pacienteId);
         public List<AtendimentoViewModel> GetByMedicoId(int medicoId);
         public int Create(NewAtendimentoInputModel atendimento);
+        public int CreateExame(int atendimentoId, NewExameInputModel exame);
     }
 }

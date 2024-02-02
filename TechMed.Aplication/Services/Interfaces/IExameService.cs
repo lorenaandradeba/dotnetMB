@@ -10,9 +10,7 @@ namespace TechMed.Aplication.Services.Interfaces
     public interface IExameService
     {
         public List<ExameViewModel> GetAll();
-        public ExameViewModel GetById(int id);
-        public List<AtendimentoViewModel> GetByAtendimentoId(int id);
-        public void Create(NewExameInputModel exame);
+        public int Create(int atendimentoId, NewExameInputModel exame);
 
     }
 }

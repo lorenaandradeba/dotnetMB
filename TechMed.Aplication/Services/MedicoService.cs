@@ -18,15 +18,17 @@ namespace TechMed.Aplication.Services
         {
             _context = context;
         }
-        public Medico GetByDbId(int id){
+        public Medico GetByDbId(int id)
+        {
             var _medico = _context.Medicos.Find(id);
-             if (_medico is null)
+            if (_medico is null)
                 throw new MedicoNotFoundException();
             return _medico;
         }
-        public Medico GetByDbCrm(string crm){
-            var _medico = _context.Medicos.Find(crm);
-             if (_medico is null)
+        public Medico GetByDbCrm(string crm)
+        {
+            var _medico = _context.Medicos.Where(m => m.CRM == crm).First();
+            if (_medico is null)
                 throw new MedicoNotFoundException();
             return _medico;
         }
@@ -42,6 +44,26 @@ namespace TechMed.Aplication.Services
             _context.SaveChanges();
 
             return _medico.MedicoId;
+        }
+        public int CreateAtendimento(int medicoId, NewAtendimentoInputModel atendimento)
+        {
+            var _medico = GetByDbId(medicoId);
+        
+            var _paciente = _context.Pacientes.Find(atendimento.PacienteId);
+            if (_paciente is null)
+                throw new PacienteNotFoundException();
+            
+            var _atendimento =  _context.Atendimentos.Add(new Atendimento
+            {
+                DataHora = atendimento.DataHora,
+                Medico = _medico,
+                Paciente = _paciente
+            });
+
+            _context.SaveChanges();
+
+            return _atendimento.Entity.AtendimentoId;
+
         }
 
         public void Delete(int id)
