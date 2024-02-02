@@ -134,5 +134,28 @@ namespace TechMed.Aplication.Services
                 }
             }).ToList();
         }
+
+        public List<AtendimentoViewModel> GetByPeriodos(DateTime inicio, DateTime fim)
+        {
+            var _atendimentos = _context.Atendimentos
+            .Where(a => a.DataHora>= inicio && a.DataHora <= fim)
+            .ToList();
+
+            return _atendimentos.Select(a => new AtendimentoViewModel
+            {
+                AtendimentoId = a.AtendimentoId,
+                DataHora = a.DataHora,
+                Medico = new MedicoViewModel
+                {
+                    MedicoId = a.Medico.MedicoId,
+                    Nome = a.Medico.Nome
+                },
+                Paciente = new PacienteViewModel
+                {
+                    PacienteId = a.Paciente.PacienteId,
+                    Nome = a.Paciente.Nome
+                }
+            }).ToList();
+        }
     }
 }
