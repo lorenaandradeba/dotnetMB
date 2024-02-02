@@ -6,8 +6,13 @@ using TechMed.Infrastructure.Persistence;
 
 var builder = WebApplication.CreateBuilder(args);
 
+
 // Add services to the container.
 builder.Services.AddScoped<IPacienteService, PacienteService>();
+builder.Services.AddScoped<IMedicoService, MedicoService>();
+builder.Services.AddScoped<IAtendimentoService, AtendimentoService>();
+builder.Services.AddScoped<IExameService, ExameService>();
+
 builder.Services.AddDbContext<TechMedDbContext>(options => {
     var connectionString = builder.Configuration.GetConnectionString("TechMedDb");
 
