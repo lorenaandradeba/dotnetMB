@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 using TechMed.Aplication.InputModel;
 using TechMed.Aplication.Services.Interfaces;
 using TechMed.Aplication.ViewModel;
@@ -29,12 +30,12 @@ namespace TechMed.Aplication.Services
         {
 
             var _atendimento = _context.Atendimentos.Where(a => a.AtendimentoId == atendimentoId).First();
-             
-            var _exame =  _context.Exames.Add(new Exame
+
+            var _exame = _context.Exames.Add(new Exame
             {
+                Nome = exame.Nome,
                 DataHora = exame.DataHora,
-               Atendimento = _atendimento
-                 
+                Atendimento = _atendimento
             });
 
             _context.SaveChanges();
@@ -64,7 +65,11 @@ namespace TechMed.Aplication.Services
 
         public AtendimentoViewModel? GetById(int id)
         {
-            var _atendimento = _context.Atendimentos.Find(id);
+            var _atendimento = _context.Atendimentos
+            .Include(a => a.Medico) 
+            .Include(a => a.Paciente)
+            .Where(a => a.AtendimentoId == id).First();
+            
 
             if (_atendimento is null)
                 throw new AtendimentoNotFoundException();
@@ -91,6 +96,8 @@ namespace TechMed.Aplication.Services
         public List<AtendimentoViewModel> GetByMedicoId(int medicoId)
         {
             var _atendimentos = _context.Atendimentos
+            .Include(a => a.Medico) 
+            .Include(a => a.Paciente)
             .Where(a => a.Medico.MedicoId == medicoId)
             .ToList();
 
@@ -114,10 +121,12 @@ namespace TechMed.Aplication.Services
         public List<AtendimentoViewModel> GetByPacienteId(int pacienteId)
         {
             var _atendimentos = _context.Atendimentos
+            .Include(a => a.Medico) 
+            .Include(a => a.Paciente)
             .Where(a => a.Paciente.PacienteId == pacienteId)
             .ToList();
 
-            
+
             return _atendimentos.Select(a => new AtendimentoViewModel
             {
                 AtendimentoId = a.AtendimentoId,
@@ -138,7 +147,9 @@ namespace TechMed.Aplication.Services
         public List<AtendimentoViewModel> GetByPeriodos(DateTime inicio, DateTime fim)
         {
             var _atendimentos = _context.Atendimentos
-            .Where(a => a.DataHora>= inicio && a.DataHora <= fim)
+            .Include(a => a.Medico) 
+            .Include(a => a.Paciente)
+            .Where(a => a.DataHora >= inicio && a.DataHora <= fim)
             .ToList();
 
             return _atendimentos.Select(a => new AtendimentoViewModel
