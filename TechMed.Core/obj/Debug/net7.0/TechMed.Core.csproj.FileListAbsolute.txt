@@ -1,0 +1,12 @@
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/TechMed.Core/bin/Debug/net7.0/TechMed.Core.deps.json
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/TechMed.Core/bin/Debug/net7.0/TechMed.Core.dll
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/TechMed.Core/bin/Debug/net7.0/TechMed.Core.pdb
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/TechMed.Core/obj/Debug/net7.0/TechMed.Core.csproj.AssemblyReference.cache
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/TechMed.Core/obj/Debug/net7.0/TechMed.Core.GeneratedMSBuildEditorConfig.editorconfig
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/TechMed.Core/obj/Debug/net7.0/TechMed.Core.AssemblyInfoInputs.cache
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/TechMed.Core/obj/Debug/net7.0/TechMed.Core.AssemblyInfo.cs
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/TechMed.Core/obj/Debug/net7.0/TechMed.Core.csproj.CoreCompileInputs.cache
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/TechMed.Core/obj/Debug/net7.0/TechMed.Core.dll
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/TechMed.Core/obj/Debug/net7.0/refint/TechMed.Core.dll
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/TechMed.Core/obj/Debug/net7.0/TechMed.Core.pdb
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/TechMed.Core/obj/Debug/net7.0/ref/TechMed.Core.dll
