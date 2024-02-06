@@ -9,7 +9,6 @@ public class Exame:BaseEntity
     public decimal Valor {get; set;}
     public string? Local {get; set;}
     public string? ResultadoDescricao {get;set;}
-    public int AtendimentoId { get; set; }
-    public required Atendimento Atendimento { get; set; }
+    public ICollection<Atendimento>? Atendimentos {get; set;}
 
 }
