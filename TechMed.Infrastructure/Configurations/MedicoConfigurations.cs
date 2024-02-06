@@ -13,6 +13,8 @@ public class MedicoConfigurations : IEntityTypeConfiguration<Medico>
         .HasKey(m => m.MedicoId);
 
         builder
+        .Property(m => m.Nome).HasColumnType("longtext");
+        builder
         .Property(m => m.MedicoId).IsUnicode();
 
         builder
