@@ -1,0 +1,17 @@
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/TechMed.Infrastructure/obj/Debug/net7.0/TechMed.Infrastructure.csproj.AssemblyReference.cache
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/TechMed.Infrastructure/obj/Debug/net7.0/TechMed.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/TechMed.Infrastructure/obj/Debug/net7.0/TechMed.Infrastructure.AssemblyInfoInputs.cache
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/TechMed.Infrastructure/obj/Debug/net7.0/TechMed.Infrastructure.AssemblyInfo.cs
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/TechMed.Infrastructure/obj/Debug/net7.0/TechMed.Infrastructure.csproj.CoreCompileInputs.cache
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/TechMed.Infrastructure/bin/Debug/net7.0/TechMed.Infrastructure.deps.json
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/TechMed.Infrastructure/bin/Debug/net7.0/TechMed.Infrastructure.runtimeconfig.json
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/TechMed.Infrastructure/bin/Debug/net7.0/TechMed.Infrastructure.dll
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/TechMed.Infrastructure/bin/Debug/net7.0/TechMed.Infrastructure.pdb
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/TechMed.Infrastructure/bin/Debug/net7.0/TechMed.Core.dll
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/TechMed.Infrastructure/bin/Debug/net7.0/TechMed.Core.pdb
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/TechMed.Infrastructure/obj/Debug/net7.0/TechMed.Infrastructure.csproj.CopyComplete
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/TechMed.Infrastructure/obj/Debug/net7.0/TechMed.Infrastructure.dll
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/TechMed.Infrastructure/obj/Debug/net7.0/refint/TechMed.Infrastructure.dll
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/TechMed.Infrastructure/obj/Debug/net7.0/TechMed.Infrastructure.pdb
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/TechMed.Infrastructure/obj/Debug/net7.0/TechMed.Infrastructure.genruntimeconfig.cache
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/TechMed.Infrastructure/obj/Debug/net7.0/ref/TechMed.Infrastructure.dll
