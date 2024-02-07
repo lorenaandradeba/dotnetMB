@@ -7,6 +7,7 @@ using ResTIConnect.Application.InputModels;
 using ResTIConnect.Application.Services.Interfaces;
 using ResTIConnect.Application.ViewModels;
 using ResTIConnect.Domain.Entities;
+using ResTIConnect.Domain.Exceptions;
 using ResTIConnect.Infra.Data.Context;
 
 namespace ResTIConnect.Application.Services
@@ -47,20 +48,40 @@ namespace ResTIConnect.Application.Services
             return perfis;
         }
 
+        private Perfis GetByDbId(int id)
+        {
+            var _perfil = _context.Perfis.Find(id);
+
+            if (_perfil is null)
+                throw new PerfilNotFoundException();
+
+            return _perfil;
+        }
+        public void Update(int id, NewPerfilInputModel perfil)
+        {
+            var _perfil = GetByDbId(id);
+            _perfil.Descricao = perfil.Descricao;
+            _perfil.Permissoes = perfil.Permissoes;
+
+            _context.Perfis.Update(_perfil);
+            _context.SaveChanges();
+        }
+        public void Delete(int id)
+        {
+            _context.Perfis.Remove(GetByDbId(id));
+            _context.SaveChanges();
+        }
         public PerfilViewModel? GetById(int id)
         {
-            var perfil = _context.Perfis.Find(id);
-            if (perfil != null)
+            var perfil = GetByDbId(id);
+
+            var perfilViewModel = new PerfilViewModel
             {
-                var perfilViewModel = new PerfilViewModel
-                {
-                    PerfilId = perfil.PerfilId,
-                    Descricao = perfil.Descricao,
-                    Permissoes = perfil.Permissoes
-                };
-                return perfilViewModel;
-            }
-            return null;
+                PerfilId = perfil.PerfilId,
+                Descricao = perfil.Descricao,
+                Permissoes = perfil.Permissoes
+            };
+            return perfilViewModel;
         }
 
         public List<PerfilViewModel> GetByUserId(int userId)
@@ -77,7 +98,7 @@ namespace ResTIConnect.Application.Services
                        UserId = u.UserId,
                        Name = u.Name,
                    }).ToList()
-                })
+               })
                .ToList();
 
             return perfis;
