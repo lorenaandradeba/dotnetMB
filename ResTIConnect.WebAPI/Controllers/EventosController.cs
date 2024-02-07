@@ -16,8 +16,8 @@ namespace ResTIConnect.WebAPI.Controllers
     public class EventosController : ControllerBase
     {
         private readonly IEventoService _eventoService;
-        private List<EventoViewModel> Eventos => _eventoService.GetAll();
-        private EventosController(IEventoService eventoService) => _eventoService = eventoService;
+        public List<EventoViewModel> Eventos => _eventoService.GetAll();
+        public EventosController(IEventoService eventoService) => _eventoService = eventoService;
 
         [HttpGet("eventos")]
         public IActionResult Get()
