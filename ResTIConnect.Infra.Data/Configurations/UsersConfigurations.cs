@@ -20,6 +20,11 @@ namespace ResTIConnect.Infra.Data.Configurations
 
             builder.HasMany(u => u.Sistemas)
                 .WithMany(s => s.Users);
+
+            builder.HasOne(u => u.Endereco)
+                .WithOne()
+                .HasForeignKey<User>(u => u.EnderecoId)
+                .IsRequired(false);
         }
     }
 }
