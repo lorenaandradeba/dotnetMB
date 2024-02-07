@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using TechMed.Core.Entities;
 
 namespace TechMed.Infrastructure.Context;
 
@@ -6,6 +7,11 @@ namespace TechMed.Infrastructure.Context;
 public class TechMedContext : DbContext
 {
     public TechMedContext(DbContextOptions<TechMedContext> options) : base(options){}
+
+    public DbSet<Atendimento> Atendimentos { get; set; }
+    public DbSet<Exame> Exames { get; set; }
+    public DbSet<Medico> Medicos { get; set; }
+    public DbSet<Paciente> Pacientes { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder){
         base.OnModelCreating(modelBuilder);

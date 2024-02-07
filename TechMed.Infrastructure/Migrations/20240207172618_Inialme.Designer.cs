@@ -11,8 +11,8 @@ using TechMed.Infrastructure.Context;
 namespace TechMed.Infrastructure.Migrations
 {
     [DbContext(typeof(TechMedContext))]
-    [Migration("20240206135321_inicial")]
-    partial class inicial
+    [Migration("20240207172618_Inialme")]
+    partial class Inialme
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

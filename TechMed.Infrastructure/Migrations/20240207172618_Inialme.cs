@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace TechMed.Infrastructure.Migrations
 {
     /// <inheritdoc />
-    public partial class inicial : Migration
+    public partial class Inialme : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

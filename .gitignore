@@ -1,1 +1,6 @@
 debug/
+Aplication/src/Domain/bin/*
+Aplication/src/Domain/obj/*
+
+Aplication/src/Domain/bin/
+Aplication/src/Domain/obj/

@@ -25,7 +25,17 @@ public class ExameConfigurations : IEntityTypeConfiguration<Exame>
 
         //relacionamentos
         builder
-        .HasMany(e => e.Atendimentos).WithMany(e => e.Exames);
+        .HasMany(e => e.Atendimentos).WithMany(e => e.Exames)
+        .UsingEntity<AtendimentoExame>(
+            at => at
+            .HasOne(ae => ae.Atendimento)
+            .WithMany(a => a.AtendimentoExames)
+            .HasForeignKey(ae => ae.AtendimentoId),
+            ae => ae
+            .HasOne(ae => ae.Exame)
+            .WithMany(e => e.AtendimentoExames)
+            .HasForeignKey(ae => ae.ExameId)
+        );
 
     }
 }
