@@ -67,7 +67,7 @@ namespace ResTIConnect.Application.Services
         public List<SistemaViewModel> GetByEventoPeriodos(string tipoEvento, DateTime inicio)
         {
             var sistemas = _context.Sistemas
-            .Where(s => s.Eventos.Any(e => e.Tipo == tipoEvento && e.DataHoraOcorrencia>= inicio))
+            .Where(s => s.Eventos != null && s.Eventos.Any(e => e.Tipo == tipoEvento && e.DataHoraOcorrencia >= inicio))
             .Select(s => new SistemaViewModel
             {
                 SistemaId = s.SistemaId,
@@ -137,7 +137,7 @@ namespace ResTIConnect.Application.Services
             if (_sistema is null)
                 throw new SistemaNotFoundException();
 
-            _evento.Sistemas.Add(_sistema);
+            _evento.Sistemas!.Add(_sistema);
             _context.SaveChanges();
         }
     }
