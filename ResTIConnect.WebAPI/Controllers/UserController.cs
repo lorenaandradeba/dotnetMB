@@ -9,12 +9,12 @@ using ResTIConnect.Application.ViewModels;
 
 namespace ResTIConnect.WebAPI.Controllers
 {
-    
+
     [ApiController]
     [Route("/api/v0.1/")]
-    public class UserController: ControllerBase
+    public class UserController : ControllerBase
     {
-        
+
         private readonly IUserService _userService;
         public List<UserViewModel> Users => _userService.GetAll();
         public UserController(IUserService service) => _userService = service;
@@ -59,6 +59,19 @@ namespace ResTIConnect.WebAPI.Controllers
                 return NoContent();
             _userService.Delete(id);
             return Ok();
+        }
+        [HttpGet("users/perfil/{id}")]//  – usuários com um determinado perfil 
+        public IActionResult GetUsersByPerfilId(int id)
+        {
+            throw new NotImplementedException();
+        }
+        [HttpPut("user/{userId}/sistema/{sistemaId}")]
+        public IActionResult AdicionaSistemaAoUser(int userId, int sistemaId)
+        {
+         
+                _userService.AdicionaSistemaAoUser(userId, sistemaId);
+                return Ok("Sistema adicionado ao usuário com sucesso");
+           
         }
     }
 }
