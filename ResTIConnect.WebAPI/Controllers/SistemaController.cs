@@ -41,24 +41,45 @@ namespace ResTIConnect.WebAPI.Controllers
             return CreatedAtAction(nameof(Get), sistema);
 
         }
+        [HttpGet("system/user/{id}")]// – sistemas com alguma relação com um determinado usuário 
+        public IActionResult GetSistemasByUserId(int userId)
+        {
+            var sistemas = _sistemaService.GetUserById(userId);
+            return Ok(sistemas);
+        }
 
-        // [HttpPut("sistema/{id}")]
-        // public IActionResult Put(int id, [FromBody] NewSistemaInputModel sistema)
-        // {
-        //     if (_sistemaService.GetById(id) == null)
-        //         return NoContent();
-        //     _sistemaService.Update(id, sistema);
-        //     return Ok(_enderecoService.GetById(id));
-        // }
+        [HttpGet("system/event/{type}/from/{date}")]//  – sistemas onde ocorreram um determinado evento a partir de uma data até a atual 
+        public IActionResult GetSistemasByEventoTipoByData(String tipo, DateTime dataInicio)
+        {
 
-        // [HttpDelete("sistema/{id}")]
-        // public IActionResult Delete(int id)
-        // {
-        //     if (_sistemaService.GetById(id) == null)
-        //         return NoContent();
-        //     _sistemaService.Delete(id);
-        //     return Ok();
-        // }
+            var sistemas = _sistemaService.GetByEventoPeriodos(tipo, dataInicio);
+            return Ok(sistemas);
+             
+        }
+
+         [HttpPut("evento/{eventoId}/sistema/{sistemaId}")]
+        public IActionResult AdicionaSistemaAoEvento(int eventoId, int sistemaId)
+        {
+            // try
+            // {
+                _sistemaService.AdicionaSistemaAoEvento(eventoId, sistemaId);
+                return Ok("Evento adicionado ao sistema com sucesso");
+            // }
+            // catch (EventoNotFoundException ex)
+            // {
+            //     return NotFound(ex.Message);
+            // }
+            // catch (SistemaNotFoundException ex)
+            // {
+            //     return NotFound(ex.Message);
+            // }
+            // catch (Exception ex)
+            // {
+            //     return StatusCode(500, ex.Message);
+            // }
+           
+        }
+
 
 
     }

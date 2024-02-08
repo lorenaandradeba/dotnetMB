@@ -30,7 +30,8 @@ namespace ResTIConnect.Application.Services
                 Tipo = evento.Tipo,
                 Codigo = evento.Codigo,
                 Conteudo = evento.Conteudo,
-                DataHoraOcorrencia = evento.DataHoraOcorrencia
+                DataHoraOcorrencia = evento.DataHoraOcorrencia,
+                
             };
 
             _context.Eventos.Add(_evento);
@@ -78,5 +79,6 @@ namespace ResTIConnect.Application.Services
 
             return eventoViewModel;
         }
+        
     }
 }

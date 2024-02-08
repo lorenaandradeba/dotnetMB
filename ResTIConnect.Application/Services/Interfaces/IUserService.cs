@@ -13,8 +13,13 @@ namespace ResTIConnect.Application.Services.Interfaces
         
       public List<UserViewModel> GetAll();
       public UserViewModel? GetById(int id);
+      public List<UserViewModel> GetByEnderecoUF(string uf);
+      public List<UserViewModel> GetBySistemaId(int sistemaId);
+      public List<UserViewModel> GetByPerfilId(int perfilId);
       public int Create(NewUserInputModel user);
+
       public void AdicionaSistemaAoUser(int userId, int sistemaId);
+      public void AdicionaPerfilAoUser(int userId, int sistemaId);
       public void Update(int id, NewUserInputModel user);
       public void Delete(int id);
     }
