@@ -489,6 +489,19 @@
           "buildTransitive/net6.0/System.Text.Json.targets": {}
         }
       },
+      "TechMed.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "TechMed.Infrastructure": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/TechMed.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TechMed.Application.dll": {}
+        }
+      },
       "TechMed.Core/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
@@ -1460,6 +1473,11 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "TechMed.Application/1.0.0": {
+      "type": "project",
+      "path": "../TechMed.Application/TechMed.Application.csproj",
+      "msbuildProject": "../TechMed.Application/TechMed.Application.csproj"
+    },
     "TechMed.Core/1.0.0": {
       "type": "project",
       "path": "../TechMed.Core/TechMed.Core.csproj",
@@ -1477,7 +1495,7 @@
       "Microsoft.EntityFrameworkCore.Design >= 7.0.14",
       "Pomelo.EntityFrameworkCore.MySql >= 7.0.0",
       "Swashbuckle.AspNetCore >= 6.5.0",
-      "TechMed.Infrastructure >= 1.0.0"
+      "TechMed.Application >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -1505,8 +1523,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/TechMed.Infrastructure/TechMed.Infrastructure.csproj": {
-              "projectPath": "/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/TechMed.Infrastructure/TechMed.Infrastructure.csproj"
+            "/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/TechMed.Application/TechMed.Application.csproj": {
+              "projectPath": "/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/TechMed.Application/TechMed.Application.csproj"
             }
           }
         }

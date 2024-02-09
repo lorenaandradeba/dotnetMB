@@ -7,7 +7,6 @@ namespace TechMed.Infrastructure.Context;
 public class TechMedContext : DbContext
 {
     public TechMedContext(DbContextOptions<TechMedContext> options) : base(options){}
-
     public DbSet<Atendimento> Atendimentos { get; set; }
     public DbSet<Exame> Exames { get; set; }
     public DbSet<Medico> Medicos { get; set; }

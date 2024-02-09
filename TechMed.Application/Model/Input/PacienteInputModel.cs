@@ -1,0 +1,5 @@
+namespace TechMed.Application.Model.Input;
+public class PacienteInputModel{
+    public string? Name {get;set;}
+
+}

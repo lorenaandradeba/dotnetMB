@@ -20,10 +20,12 @@
 /home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/TechMed.WebAPI/bin/Debug/net7.0/Swashbuckle.AspNetCore.SwaggerGen.dll
 /home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/TechMed.WebAPI/bin/Debug/net7.0/Swashbuckle.AspNetCore.SwaggerUI.dll
 /home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/TechMed.WebAPI/bin/Debug/net7.0/System.CodeDom.dll
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/TechMed.WebAPI/bin/Debug/net7.0/TechMed.Application.dll
 /home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/TechMed.WebAPI/bin/Debug/net7.0/TechMed.Core.dll
 /home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/TechMed.WebAPI/bin/Debug/net7.0/TechMed.Infrastructure.dll
-/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/TechMed.WebAPI/bin/Debug/net7.0/TechMed.Infrastructure.pdb
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/TechMed.WebAPI/bin/Debug/net7.0/TechMed.Application.pdb
 /home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/TechMed.WebAPI/bin/Debug/net7.0/TechMed.Core.pdb
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/TechMed.WebAPI/bin/Debug/net7.0/TechMed.Infrastructure.pdb
 /home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/TechMed.WebAPI/obj/Debug/net7.0/TechMed.WebAPI.csproj.AssemblyReference.cache
 /home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/TechMed.WebAPI/obj/Debug/net7.0/TechMed.WebAPI.GeneratedMSBuildEditorConfig.editorconfig
 /home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/TechMed.WebAPI/obj/Debug/net7.0/TechMed.WebAPI.AssemblyInfoInputs.cache
