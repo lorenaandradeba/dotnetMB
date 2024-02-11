@@ -55,12 +55,29 @@ namespace Escambo.Application.Services
 
         public AvaliacaoViewModel? GetById(int id)
         {
-            throw new NotImplementedException();
+           var _avaliacao = _context.Avaliacoes.Find(id);
+           if (_avaliacao == null)
+                return null;
+
+            return new AvaliacaoViewModel
+            {
+                AvaliacaoId = _avaliacao.AvaliacaoId,
+                Estelas = _avaliacao.Estrelas,
+                Mensagem = _avaliacao.Mensagem
+            };
+
         }
 
         public void Update(int id, AvaliacaoInputModel avaliacao)
         {
-            throw new NotImplementedException();
+            var _avaliacao = _context.Avaliacoes.Find(id);
+            if (_avaliacao == null)
+                return;
+            _avaliacao.Mensagem = avaliacao.Mensagem;
+            _avaliacao.Estrelas = avaliacao.Estrelas;
+            
+            _context.Avaliacoes.Update(_avaliacao);
+            _context.SaveChanges();
         }
     }
 }
