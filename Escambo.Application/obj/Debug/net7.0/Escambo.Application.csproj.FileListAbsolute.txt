@@ -1,0 +1,17 @@
+/home/lores/tic18/p010/dotnetMB/Escambo.Application/obj/Debug/net7.0/Escambo.Application.csproj.AssemblyReference.cache
+/home/lores/tic18/p010/dotnetMB/Escambo.Application/obj/Debug/net7.0/Escambo.Application.GeneratedMSBuildEditorConfig.editorconfig
+/home/lores/tic18/p010/dotnetMB/Escambo.Application/obj/Debug/net7.0/Escambo.Application.AssemblyInfoInputs.cache
+/home/lores/tic18/p010/dotnetMB/Escambo.Application/obj/Debug/net7.0/Escambo.Application.AssemblyInfo.cs
+/home/lores/tic18/p010/dotnetMB/Escambo.Application/obj/Debug/net7.0/Escambo.Application.csproj.CoreCompileInputs.cache
+/home/lores/tic18/p010/dotnetMB/Escambo.Application/bin/Debug/net7.0/Escambo.Application.deps.json
+/home/lores/tic18/p010/dotnetMB/Escambo.Application/bin/Debug/net7.0/Escambo.Application.dll
+/home/lores/tic18/p010/dotnetMB/Escambo.Application/bin/Debug/net7.0/Escambo.Application.pdb
+/home/lores/tic18/p010/dotnetMB/Escambo.Application/bin/Debug/net7.0/Escambo.Dommain.dll
+/home/lores/tic18/p010/dotnetMB/Escambo.Application/bin/Debug/net7.0/Escambo.Infra.dll
+/home/lores/tic18/p010/dotnetMB/Escambo.Application/bin/Debug/net7.0/Escambo.Dommain.pdb
+/home/lores/tic18/p010/dotnetMB/Escambo.Application/bin/Debug/net7.0/Escambo.Infra.pdb
+/home/lores/tic18/p010/dotnetMB/Escambo.Application/obj/Debug/net7.0/Escambo.Application.csproj.CopyComplete
+/home/lores/tic18/p010/dotnetMB/Escambo.Application/obj/Debug/net7.0/Escambo.Application.dll
+/home/lores/tic18/p010/dotnetMB/Escambo.Application/obj/Debug/net7.0/refint/Escambo.Application.dll
+/home/lores/tic18/p010/dotnetMB/Escambo.Application/obj/Debug/net7.0/Escambo.Application.pdb
+/home/lores/tic18/p010/dotnetMB/Escambo.Application/obj/Debug/net7.0/ref/Escambo.Application.dll
