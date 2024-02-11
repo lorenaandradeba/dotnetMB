@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace Escambo.WebAPI.Controllers
 {
     [ApiController]
-    [Route("Escambo/Anuncio")]
+    [Route("Escambo/")]
     public class AnuncioControler : ControllerBase, IAnuncioController
     {
         protected readonly IAnuncioService _anuncioService;

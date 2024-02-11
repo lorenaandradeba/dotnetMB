@@ -7,14 +7,14 @@ using Escambo.WebAPI.Controllers.Interface;
 using Microsoft.AspNetCore.Mvc;
 
 [ApiController]
-[Route("Escambo/Usuario")]
+[Route("Escambo/")]
 public class UsuarioController : ControllerBase, IUsuarioController
 {
     protected readonly IUsuarioService _usuarioService;
     public List<UsuarioViewModel> _usuarios  => _usuarioService.GetAll().ToList();
 
     public UsuarioController(IUsuarioService usuarioService) => _usuarioService = usuarioService;
-    [HttpGet("Usuarios")]
+    [HttpGet("Usuario/all")]
     public IActionResult GetAll()
     {
         if(_usuarios == null) return NotFound();
@@ -31,7 +31,7 @@ public class UsuarioController : ControllerBase, IUsuarioController
        return Ok(id);
     }
 
-    [HttpGet("Usuario")]
+    [HttpGet("Usuario/{id}")]
     public IActionResult GetById(int id)
     {
         var _usuarios = _usuarioService.GetById(id);
@@ -41,14 +41,14 @@ public class UsuarioController : ControllerBase, IUsuarioController
        
     }
 
-    [HttpPut("Usuario")]
+    [HttpPut("Usuario/{id}")]
     public IActionResult Update(int id, UsuarioInputModel input)
     {
         _usuarioService.Update(id, input);
         return Ok();
     }
 
-    [HttpDelete("Usuario")]
+    [HttpDelete("Usuario/{id}")]
     public IActionResult Delete(int id)
     {
         _usuarioService.Delete(id);

@@ -12,7 +12,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IUsuarioService, UsuarioService>();
-// builder.Services.AddScoped<IAnuncioService, AnuncioService>();
+builder.Services.AddScoped<IAnuncioService, AnuncioService>();
 // builder.Services.AddScoped<IConversaService, ConversaService>();
 // builder.Services.AddScoped<IMensagemService, MensagemService>();
 // builder.Services.AddScoped<IAvaliacaoService, AvaliacaoService>();
@@ -21,7 +21,7 @@ builder.Services.AddScoped<IUsuarioService, UsuarioService>();
 builder.Services.AddDbContext<EscamboContext>(options =>
 {
     var connectionString = builder.Configuration.GetConnectionString("EscamboDb");
-    var serverVersion = Microsoft.EntityFrameworkCore.ServerVersion.AutoDetect(connectionString);
+    var serverVersion = ServerVersion.AutoDetect(connectionString);
     options.UseMySql(connectionString, serverVersion);
 });
 
