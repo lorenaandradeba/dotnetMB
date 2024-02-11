@@ -14,13 +14,15 @@ public class UsuarioController : ControllerBase, IUsuarioController
     public List<UsuarioViewModel> _usuarios  => _usuarioService.GetAll().ToList();
 
     public UsuarioController(IUsuarioService usuarioService) => _usuarioService = usuarioService;
-    [HttpGet]
+    [HttpGet("Usuarios")]
     public IActionResult GetAll()
     {
         if(_usuarios == null) return NotFound();
 
         return Ok(_usuarios); 
     }
+
+    [HttpPost("Usuario")]
 
     public IActionResult Create(UsuarioInputModel input)
     {
@@ -29,6 +31,7 @@ public class UsuarioController : ControllerBase, IUsuarioController
        return Ok(id);
     }
 
+    [HttpGet("Usuario")]
     public IActionResult GetById(int id)
     {
         var _usuarios = _usuarioService.GetById(id);
@@ -38,13 +41,14 @@ public class UsuarioController : ControllerBase, IUsuarioController
        
     }
 
+    [HttpPut("Usuario")]
     public IActionResult Update(int id, UsuarioInputModel input)
     {
         _usuarioService.Update(id, input);
         return Ok();
     }
 
-
+    [HttpDelete("Usuario")]
     public IActionResult Delete(int id)
     {
         _usuarioService.Delete(id);

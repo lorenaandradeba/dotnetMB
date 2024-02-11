@@ -9,8 +9,7 @@
       "Escambo.Application/1.0.0": {
         "dependencies": {
           "Escambo.Dommain": "1.0.0",
-          "Escambo.Infra": "1.0.0",
-          "Microsoft.EntityFrameworkCore": "7.0.15"
+          "Escambo.Infra": "1.0.0"
         },
         "runtime": {
           "Escambo.Application.dll": {}
