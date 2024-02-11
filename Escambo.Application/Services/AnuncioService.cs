@@ -8,21 +8,17 @@ using Escambo.Application.ViewModels;
 using Escambo.Dommain.Exceptions;
 using Escambo.Dommain.Model;
 using Escambo.Infra.Context;
+using Microsoft.EntityFrameworkCore;
 
 namespace Escambo.Application.Services
 {
-    public class AnuncioService : BaseService, IAnuncioService
+    public class AnuncioService : IAnuncioService
     {
 
-        private readonly IAnuncioService _anuncioService;
-        private readonly IUsuarioService _usuarioService;
+        private readonly EscamboContext _context;
 
-        public AnuncioService(EscamboContext context, IAnuncioService anuncioService, IUsuarioService usuarioService) : base(context)
-        {
-            _anuncioService = anuncioService;
-            _usuarioService = usuarioService;
+        public AnuncioService(EscamboContext context) => _context = context;
 
-        }
         public int Create(AnuncioInputModel anuncio)
         {
             var _usuario = _context.Usuarios.Where(u => u.UsuarioId == anuncio.UsuarioId).First();
@@ -61,22 +57,72 @@ namespace Escambo.Application.Services
 
         public List<AnuncioViewModel> GetAll()
         {
-            var _anuncios = _context.Anuncios
+            var anuncios = _context.Anuncios
+            .Include(a => a.Usuario)
             .Select(a => new AnuncioViewModel
             {
-AnuncioId = a.AnuncioId,
+                AnuncioId = a.AnuncioId,
+                NomeServico = a.NomeServico,
+                Descricao = a.Descricao,
+                Creditos = a.Creditos,
+                Categoria = a.Categoria,
+                Tipo = a.Tipo,
+                UsuarioId = a.UsuarioId,
+                Usuario = a.Usuario != null ? new UsuarioViewModel
+                {
+                    Nome = a.Usuario.Nome!,
+                    Email = a.Usuario.Email,
+                } : null
+            }).ToList();
 
-            });
+            return anuncios;
         }
 
         public AnuncioViewModel? GetById(int id)
         {
-            throw new NotImplementedException();
+            var anuncio = _context.Anuncios
+        .Include(a => a.Usuario)
+        .FirstOrDefault(a => a.AnuncioId == id);
+
+            if (anuncio == null)
+                return null;
+
+            return new AnuncioViewModel
+            {
+                AnuncioId = anuncio.AnuncioId,
+                NomeServico = anuncio.NomeServico,
+                Descricao = anuncio.Descricao,
+                Creditos = anuncio.Creditos,
+                Categoria = anuncio.Categoria,
+                Tipo = anuncio.Tipo,
+                UsuarioId = anuncio.UsuarioId,
+                Usuario = anuncio.Usuario != null ? new UsuarioViewModel
+                {
+                    Nome = anuncio.Usuario.Nome!,
+                    Email = anuncio.Usuario.Email,
+                } : null
+            };
         }
 
         public void Update(int id, AnuncioInputModel anuncio)
         {
-            throw new NotImplementedException();
+            var anuncioToUpdate = _context.Anuncios
+                .Include(a => a.Usuario) 
+                .FirstOrDefault(a => a.AnuncioId == id);
+
+            if (anuncioToUpdate == null)
+            {
+                return;
+            }
+
+            anuncioToUpdate.NomeServico = anuncio.NomeServico;
+            anuncioToUpdate.Descricao = anuncio.Descricao;
+            anuncioToUpdate.Creditos = anuncio.Creditos;
+            anuncioToUpdate.Categoria = anuncio.Categoria;
+            anuncioToUpdate.Tipo = anuncio.Tipo;
+            anuncioToUpdate.UsuarioId = anuncio.UsuarioId;
+
+            _context.SaveChanges();
         }
     }
 }
