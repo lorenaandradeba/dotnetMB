@@ -11,4 +11,6 @@ public sealed class Mensagem : BaseEntity
     public int UsuariosIdUsuario { get; set; }
     public Conversa? Conversa { get; set; }
     public Usuario? Usuario { get; set; }
+
+    
 }

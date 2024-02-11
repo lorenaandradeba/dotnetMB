@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Escambo.Dommain.Model;
 
-    public class ConversasHasUsuarios : BaseEntity
+    public class  ConversasHasUsuarios : BaseEntity
     {
         public int ConversasIdMensagem { get; set; }
         public int UsuariosIdUsuario { get; set; }
