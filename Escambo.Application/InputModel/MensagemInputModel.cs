@@ -8,9 +8,8 @@ namespace Escambo.Application.InputModels
     public class MensagemInputModel
     {
         public string? Texto { get; set; }
-        public DateTime DataEnvio { get; set; }
-        public DateTime HoraEnvio { get; set; }
-        public int ConversaId { get; set; }
+        
         public int UsuariosIdUsuario { get; set; }
+        public int ConversasIdMensagem { get; internal set; }
     }
 }

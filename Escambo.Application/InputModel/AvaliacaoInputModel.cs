@@ -8,6 +8,6 @@ namespace Escambo.Application.InputModels
     public class AvaliacaoInputModel
     {
         public string? Mensagem { get; set; }
-        public int? Estelas { get; set; }
+        public int? Estrelas { get; set; }
     }
 }

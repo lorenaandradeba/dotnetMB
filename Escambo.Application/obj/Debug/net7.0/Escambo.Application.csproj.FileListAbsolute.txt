@@ -15,3 +15,20 @@
 /home/lores/tic18/p010/dotnetMB/Escambo.Application/obj/Debug/net7.0/refint/Escambo.Application.dll
 /home/lores/tic18/p010/dotnetMB/Escambo.Application/obj/Debug/net7.0/Escambo.Application.pdb
 /home/lores/tic18/p010/dotnetMB/Escambo.Application/obj/Debug/net7.0/ref/Escambo.Application.dll
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.Application/bin/Debug/net7.0/Escambo.Application.deps.json
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.Application/bin/Debug/net7.0/Escambo.Application.dll
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.Application/bin/Debug/net7.0/Escambo.Application.pdb
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.Application/bin/Debug/net7.0/Escambo.Dommain.dll
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.Application/bin/Debug/net7.0/Escambo.Infra.dll
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.Application/bin/Debug/net7.0/Escambo.Dommain.pdb
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.Application/bin/Debug/net7.0/Escambo.Infra.pdb
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.Application/obj/Debug/net7.0/Escambo.Application.csproj.AssemblyReference.cache
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.Application/obj/Debug/net7.0/Escambo.Application.GeneratedMSBuildEditorConfig.editorconfig
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.Application/obj/Debug/net7.0/Escambo.Application.AssemblyInfoInputs.cache
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.Application/obj/Debug/net7.0/Escambo.Application.AssemblyInfo.cs
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.Application/obj/Debug/net7.0/Escambo.Application.csproj.CoreCompileInputs.cache
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.Application/obj/Debug/net7.0/Escambo.Application.csproj.CopyComplete
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.Application/obj/Debug/net7.0/Escambo.Application.dll
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.Application/obj/Debug/net7.0/refint/Escambo.Application.dll
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.Application/obj/Debug/net7.0/Escambo.Application.pdb
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.Application/obj/Debug/net7.0/ref/Escambo.Application.dll

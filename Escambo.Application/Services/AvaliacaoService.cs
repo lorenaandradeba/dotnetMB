@@ -5,13 +5,14 @@ using System.Threading.Tasks;
 using Escambo.Application.InputModels;
 using Escambo.Application.Services.Interfaces;
 using Escambo.Application.ViewModels;
+using Escambo.Dommain.Model;
 using Escambo.Infra.Context;
 
 namespace Escambo.Application.Services
 {
     public class AvaliacaoService : IAvaliacaoService
     {
-         
+
         private readonly EscamboContext _context;
         public AvaliacaoService(EscamboContext context)
         {
@@ -19,27 +20,64 @@ namespace Escambo.Application.Services
         }
         public int Create(AvaliacaoInputModel avaliacao)
         {
-            throw new NotImplementedException();
+            var id = _context.Avaliacoes.Count() + 1;
+            var _avaliacao = new Avaliacao
+            {
+                AvaliacaoId = id,
+                Mensagem = avaliacao.Mensagem,
+                Estrelas = avaliacao.Estrelas,
+
+            };
+
+            _context.Avaliacoes.Add(_avaliacao);
+            _context.SaveChanges();
+
+            return _avaliacao.AvaliacaoId;
         }
 
         public void Delete(int id)
         {
-            throw new NotImplementedException();
+            var avaliacao = _context.Avaliacoes.Find(id);
+            _context.Avaliacoes.Remove(avaliacao);
+            _context.SaveChanges();
         }
 
         public List<AvaliacaoViewModel> GetAll()
         {
-            throw new NotImplementedException();
+            var _avaliacoes = _context.Avaliacoes.Select(x => new AvaliacaoViewModel
+            {
+                AvaliacaoId = x.AvaliacaoId,
+                Estelas = x.Estrelas,
+                Mensagem = x.Mensagem
+            }).ToList();
+            return _avaliacoes;
         }
 
         public AvaliacaoViewModel? GetById(int id)
         {
-            throw new NotImplementedException();
+           var _avaliacao = _context.Avaliacoes.Find(id);
+           if (_avaliacao == null)
+                return null;
+
+            return new AvaliacaoViewModel
+            {
+                AvaliacaoId = _avaliacao.AvaliacaoId,
+                Estelas = _avaliacao.Estrelas,
+                Mensagem = _avaliacao.Mensagem
+            };
+
         }
 
         public void Update(int id, AvaliacaoInputModel avaliacao)
         {
-            throw new NotImplementedException();
+            var _avaliacao = _context.Avaliacoes.Find(id);
+            if (_avaliacao == null)
+                return;
+            _avaliacao.Mensagem = avaliacao.Mensagem;
+            _avaliacao.Estrelas = avaliacao.Estrelas;
+            
+            _context.Avaliacoes.Update(_avaliacao);
+            _context.SaveChanges();
         }
     }
 }
