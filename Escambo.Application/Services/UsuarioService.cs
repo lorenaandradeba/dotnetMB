@@ -127,7 +127,6 @@ namespace Escambo.Application.Services
 
         }
 
-
         public void Update(int id, UsuarioInputModel usuarioInput)
         {
             var usuarioExistente =  _context.Usuarios.FirstOrDefault(u => u.UsuarioId == id);

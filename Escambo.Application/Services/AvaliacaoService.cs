@@ -12,7 +12,7 @@ namespace Escambo.Application.Services
 {
     public class AvaliacaoService : IAvaliacaoService
     {
-         
+
         private readonly EscamboContext _context;
         public AvaliacaoService(EscamboContext context)
         {
@@ -20,7 +20,12 @@ namespace Escambo.Application.Services
         }
         public int Create(AvaliacaoInputModel avaliacao)
         {
-            var _avaliacao = new Avaliacao{
+            var id = _context.Avaliacoes.Count() + 1;
+            var _avaliacao = new Avaliacao
+            {
+                AvaliacaoId = id,
+                Mensagem = avaliacao.Mensagem,
+                Estrelas = avaliacao.Estrelas,
 
             };
 
@@ -32,12 +37,20 @@ namespace Escambo.Application.Services
 
         public void Delete(int id)
         {
-            throw new NotImplementedException();
+            var avaliacao = _context.Avaliacoes.Find(id);
+            _context.Avaliacoes.Remove(avaliacao);
+            _context.SaveChanges();
         }
 
         public List<AvaliacaoViewModel> GetAll()
         {
-            throw new NotImplementedException();
+            var _avaliacoes = _context.Avaliacoes.Select(x => new AvaliacaoViewModel
+            {
+                AvaliacaoId = x.AvaliacaoId,
+                Estelas = x.Estrelas,
+                Mensagem = x.Mensagem
+            }).ToList();
+            return _avaliacoes;
         }
 
         public AvaliacaoViewModel? GetById(int id)

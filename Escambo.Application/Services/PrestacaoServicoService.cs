@@ -89,6 +89,7 @@ namespace Escambo.Application.Services
             _prestacao.Data = prestacao.Data;
 
             _context.Update(_prestacao);
+            _context.SaveChanges();
         }
     }
 }
