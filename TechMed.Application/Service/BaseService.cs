@@ -1,6 +1,6 @@
 namespace TechMed.Application.Services;
 using TechMed.Infrastructure.Context;
-using TechMed.Infrastructure.Interfaces;
+
 
 public abstract class BaseService
 {

@@ -9,9 +9,6 @@ using TechMed.Infrastructure.Context;
 public class PacienteService : BaseService, IPacienteService
 {
    
-
-    private int _id { get; set; } = 0;
-
     public PacienteService(TechMedContext context) : base(context){} //pasando o contexto para o construtor da classe base
    
     public int Create(PacienteInputModel medico)
@@ -54,7 +51,11 @@ public class PacienteService : BaseService, IPacienteService
 
     public PacienteViewModel? GetById(int id)
     {
-        throw new NotImplementedException();
+        var _paciente = _context.Pacientes.Find(id);
+        if(_paciente is not null){
+          return new PacienteViewModel { PacienteId = _paciente.PacienteId, Nome = _paciente.Nome };
+        }
+        return null;
     }
 
     public void Update(int id, PacienteInputModel paciente)

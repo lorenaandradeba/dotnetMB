@@ -14,5 +14,4 @@ public class Atendimento : BaseEntity
     public int MedicoId { get; set; }
     public required Medico Medico { get; set; }
     public ICollection<Exame>? Exames { get; set; }
-
 }

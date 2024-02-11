@@ -1,14 +1,14 @@
-using System.Security.Cryptography.X509Certificates;
+
 using Microsoft.AspNetCore.Mvc;
 using TechMed.Application.Model.Input;
 using TechMed.Application.Model.View;
 using TechMed.Application.Service.Interface;
-using TechMed.Core.Entities;
+
 
 namespace TechMed.WebAPI.Controller;
 
 [ApiController]
-[Route("Pacientes")]
+[Route("Paciente")]
 public class PacienteController: ControllerBase
 {
     protected readonly IPacienteService _pacienteService;
@@ -17,8 +17,8 @@ public class PacienteController: ControllerBase
         _pacienteService = service;
     }
 
-    [HttpGet ("Pacientes")]
 
+    [HttpGet ("Pacientes")]
     public IActionResult GetAll(){
         return Ok(Pacientes);
     }   
@@ -29,4 +29,19 @@ public class PacienteController: ControllerBase
         return Ok();
     }
 
+    [HttpGet ("Pacientes/{id}")]
+    public IActionResult GetById(int id){
+        var _paciente = _pacienteService.GetById(id);
+        if(_paciente is not null){
+            return Ok(_pacienteService.GetById(id));
+            
+        }
+        return NotFound();
+    }
+
+    [HttpDelete ("Pacientes/{id}")]
+    public IActionResult Delete(int id){
+        _pacienteService.Delete(id);
+        return Ok();
+    }
 }

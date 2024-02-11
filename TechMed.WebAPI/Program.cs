@@ -1,7 +1,9 @@
 using TechMed.Infrastructure.Context;
 using Microsoft.EntityFrameworkCore;
-using TechMed.Infrastructure.Interfaces;
+
 using TechMed.Application.Service.Interface;
+using TechMed.Application.Service;
+using TechMed.Core.Entities;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,11 +15,13 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<IPacienteService, PacienteService>();
+builder.Services.AddScoped<IMedicoService, MedicoService>();
+builder.Services.AddScoped<IAtendimentoService, AtendimentoService>();
 
 
 builder.Services.AddDbContext<TechMedContext>(options =>
 {
-    var connectionString = builder.Configuration.GetConnectionString("TechMed");
+    var connectionString = builder.Configuration.GetConnectionString("Escambo");
     var serveVersion = ServerVersion.AutoDetect(connectionString);
     options.UseMySql(connectionString, serveVersion);
 });
