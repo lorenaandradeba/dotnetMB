@@ -1,13 +1,23 @@
 
 using Microsoft.AspNetCore.Mvc;
 namespace Escambo.WebAPI.Controllers.Interface;
-public interface GenericController<TViewModel, TInputModel>
+public interface IGenericController<TViewModel, TInputModel>
 {
 
-    public List<TViewModel> TEntity { get; set; }
+
+    [HttpPost]   
     public IActionResult Create(TInputModel input);
+
+    [HttpGet]
     public IActionResult GetAll();
+
+    [HttpGet]
     public IActionResult GetById(int id); 
+
+    [HttpPut]
     public IActionResult Update(int id, TInputModel input);
-    void Delete(int id);
+
+    [HttpDelete]
+    public IActionResult Delete(int id);
 }
+
