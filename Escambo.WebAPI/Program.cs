@@ -14,9 +14,9 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IUsuarioService, UsuarioService>();
 builder.Services.AddScoped<IAnuncioService, AnuncioService>();
 // builder.Services.AddScoped<IConversaService, ConversaService>();
-// builder.Services.AddScoped<IMensagemService, MensagemService>();
+builder.Services.AddScoped<IMensagemService, MensagemService>();
 builder.Services.AddScoped<IAvaliacaoService, AvaliacaoService>();
-// builder.Services.AddScoped<IPrestacaoServicoService, PrestacaoServicoService>();
+builder.Services.AddScoped<IPrestacaoServicoService, PrestacaoServicoService>();
  
 builder.Services.AddDbContext<EscamboContext>(options =>
 {

@@ -17,6 +17,7 @@ public class PrestacaoServicoControler : ControllerBase, IPrestacaoServicoContro
 
     public List<PrestacaoServicoViewModel> _prestacaoServicos => _prestacaoServicoService.GetAll().ToList();
     public PrestacaoServicoControler(IPrestacaoServicoService prestacaoServicoService) => _prestacaoServicoService = prestacaoServicoService;
+    [HttpPost("PrestacaoServico")]
     public IActionResult Create(PrestacaoServicoInputModel input)
     {
        var id = _prestacaoServicoService.Create(input);
@@ -24,6 +25,7 @@ public class PrestacaoServicoControler : ControllerBase, IPrestacaoServicoContro
        return Ok(id);
     }
 
+    [HttpDelete("PrestacaoServico/{id}")]
     public IActionResult Delete(int id)
     {
         _prestacaoServicoService.Delete(id);
@@ -45,6 +47,7 @@ public class PrestacaoServicoControler : ControllerBase, IPrestacaoServicoContro
         return NotFound();
     }
 
+    [HttpPut("PrestacaoServico/{id}")]
     public IActionResult Update(int id, PrestacaoServicoInputModel input)
     {
        _prestacaoServicoService.Update(id, input);
