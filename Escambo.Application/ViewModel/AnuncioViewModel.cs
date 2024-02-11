@@ -8,7 +8,7 @@ namespace Escambo.Application.ViewModels
     public class AnuncioViewModel
     {
         public int AnuncioId { get; set; }
-        public required string NomeServico { get; set; }
+        public  string? NomeServico { get; set; }
         public string? Descricao { get; set; }
         public decimal? Creditos { get; set; }
         public string? Categoria { get; set; }

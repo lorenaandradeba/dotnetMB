@@ -8,19 +8,19 @@
     "net7.0": []
   },
   "packageFolders": {
-    "/home/lores/.nuget/packages/": {}
+    "/home/daniel-oliveira-da-silva/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/lores/tic18/p010/dotnetMB/Escambo.Dommain/Escambo.Dommain.csproj",
+      "projectUniqueName": "/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.Dommain/Escambo.Dommain.csproj",
       "projectName": "Escambo.Dommain",
-      "projectPath": "/home/lores/tic18/p010/dotnetMB/Escambo.Dommain/Escambo.Dommain.csproj",
-      "packagesPath": "/home/lores/.nuget/packages/",
-      "outputPath": "/home/lores/tic18/p010/dotnetMB/Escambo.Dommain/obj/",
+      "projectPath": "/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.Dommain/Escambo.Dommain.csproj",
+      "packagesPath": "/home/daniel-oliveira-da-silva/.nuget/packages/",
+      "outputPath": "/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.Dommain/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/lores/.nuget/NuGet/NuGet.Config"
+        "/home/daniel-oliveira-da-silva/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
@@ -59,7 +59,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.114/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.115/RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -494,8 +494,7 @@
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
           "Escambo.Dommain": "1.0.0",
-          "Escambo.Infra": "1.0.0",
-          "Microsoft.EntityFrameworkCore": "7.0.15"
+          "Escambo.Infra": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Escambo.Application.dll": {}
@@ -1496,25 +1495,25 @@
       "Escambo.Application >= 1.0.0",
       "Escambo.Infra >= 1.0.0",
       "Microsoft.AspNetCore.OpenApi >= 7.0.14",
-      "Microsoft.EntityFrameworkCore >= 7.0.15",
       "Microsoft.EntityFrameworkCore.Design >= 7.0.15",
+      "Pomelo.EntityFrameworkCore.MySql >= 7.0.0",
       "Swashbuckle.AspNetCore >= 6.5.0"
     ]
   },
   "packageFolders": {
-    "/home/lores/.nuget/packages/": {}
+    "/home/daniel-oliveira-da-silva/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/lores/tic18/p010/dotnetMB/Escambo.WebAPI/Escambo.WebAPI.csproj",
+      "projectUniqueName": "/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.WebAPI/Escambo.WebAPI.csproj",
       "projectName": "Escambo.WebAPI",
-      "projectPath": "/home/lores/tic18/p010/dotnetMB/Escambo.WebAPI/Escambo.WebAPI.csproj",
-      "packagesPath": "/home/lores/.nuget/packages/",
-      "outputPath": "/home/lores/tic18/p010/dotnetMB/Escambo.WebAPI/obj/",
+      "projectPath": "/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.WebAPI/Escambo.WebAPI.csproj",
+      "packagesPath": "/home/daniel-oliveira-da-silva/.nuget/packages/",
+      "outputPath": "/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.WebAPI/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/lores/.nuget/NuGet/NuGet.Config"
+        "/home/daniel-oliveira-da-silva/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
@@ -1526,11 +1525,11 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "/home/lores/tic18/p010/dotnetMB/Escambo.Application/Escambo.Application.csproj": {
-              "projectPath": "/home/lores/tic18/p010/dotnetMB/Escambo.Application/Escambo.Application.csproj"
+            "/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.Application/Escambo.Application.csproj": {
+              "projectPath": "/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.Application/Escambo.Application.csproj"
             },
-            "/home/lores/tic18/p010/dotnetMB/Escambo.Infra/Escambo.Infra.csproj": {
-              "projectPath": "/home/lores/tic18/p010/dotnetMB/Escambo.Infra/Escambo.Infra.csproj"
+            "/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.Infra/Escambo.Infra.csproj": {
+              "projectPath": "/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.Infra/Escambo.Infra.csproj"
             }
           }
         }
@@ -1549,15 +1548,15 @@
             "target": "Package",
             "version": "[7.0.14, )"
           },
-          "Microsoft.EntityFrameworkCore": {
-            "target": "Package",
-            "version": "[7.0.15, )"
-          },
           "Microsoft.EntityFrameworkCore.Design": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
             "suppressParent": "All",
             "target": "Package",
             "version": "[7.0.15, )"
+          },
+          "Pomelo.EntityFrameworkCore.MySql": {
+            "target": "Package",
+            "version": "[7.0.0, )"
           },
           "Swashbuckle.AspNetCore": {
             "target": "Package",
@@ -1583,7 +1582,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.114/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.115/RuntimeIdentifierGraph.json"
       }
     }
   }

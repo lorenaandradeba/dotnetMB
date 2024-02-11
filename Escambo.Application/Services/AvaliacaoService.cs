@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Escambo.Application.InputModels;
 using Escambo.Application.Services.Interfaces;
 using Escambo.Application.ViewModels;
+using Escambo.Dommain.Model;
 using Escambo.Infra.Context;
 
 namespace Escambo.Application.Services
@@ -19,7 +20,14 @@ namespace Escambo.Application.Services
         }
         public int Create(AvaliacaoInputModel avaliacao)
         {
-            throw new NotImplementedException();
+            var _avaliacao = new Avaliacao{
+
+            };
+
+            _context.Avaliacoes.Add(_avaliacao);
+            _context.SaveChanges();
+
+            return _avaliacao.AvaliacaoId;
         }
 
         public void Delete(int id)

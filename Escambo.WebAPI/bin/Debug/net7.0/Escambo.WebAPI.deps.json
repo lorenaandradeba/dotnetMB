@@ -11,8 +11,8 @@
           "Escambo.Application": "1.0.0",
           "Escambo.Infra": "1.0.0",
           "Microsoft.AspNetCore.OpenApi": "7.0.14",
-          "Microsoft.EntityFrameworkCore": "7.0.15",
           "Microsoft.EntityFrameworkCore.Design": "7.0.15",
+          "Pomelo.EntityFrameworkCore.MySql": "7.0.0",
           "Swashbuckle.AspNetCore": "6.5.0"
         },
         "runtime": {

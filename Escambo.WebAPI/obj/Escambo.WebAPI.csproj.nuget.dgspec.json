@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/lores/tic18/p010/dotnetMB/Escambo.WebAPI/Escambo.WebAPI.csproj": {}
+    "/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.WebAPI/Escambo.WebAPI.csproj": {}
   },
   "projects": {
-    "/home/lores/tic18/p010/dotnetMB/Escambo.Application/Escambo.Application.csproj": {
+    "/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.Application/Escambo.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/lores/tic18/p010/dotnetMB/Escambo.Application/Escambo.Application.csproj",
+        "projectUniqueName": "/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.Application/Escambo.Application.csproj",
         "projectName": "Escambo.Application",
-        "projectPath": "/home/lores/tic18/p010/dotnetMB/Escambo.Application/Escambo.Application.csproj",
-        "packagesPath": "/home/lores/.nuget/packages/",
-        "outputPath": "/home/lores/tic18/p010/dotnetMB/Escambo.Application/obj/",
+        "projectPath": "/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.Application/Escambo.Application.csproj",
+        "packagesPath": "/home/daniel-oliveira-da-silva/.nuget/packages/",
+        "outputPath": "/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.Application/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/lores/.nuget/NuGet/NuGet.Config"
+          "/home/daniel-oliveira-da-silva/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -26,11 +26,11 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "/home/lores/tic18/p010/dotnetMB/Escambo.Dommain/Escambo.Dommain.csproj": {
-                "projectPath": "/home/lores/tic18/p010/dotnetMB/Escambo.Dommain/Escambo.Dommain.csproj"
+              "/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.Dommain/Escambo.Dommain.csproj": {
+                "projectPath": "/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.Dommain/Escambo.Dommain.csproj"
               },
-              "/home/lores/tic18/p010/dotnetMB/Escambo.Infra/Escambo.Infra.csproj": {
-                "projectPath": "/home/lores/tic18/p010/dotnetMB/Escambo.Infra/Escambo.Infra.csproj"
+              "/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.Infra/Escambo.Infra.csproj": {
+                "projectPath": "/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.Infra/Escambo.Infra.csproj"
               }
             }
           }
@@ -44,12 +44,6 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "dependencies": {
-            "Microsoft.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[7.0.15, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
@@ -66,21 +60,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.114/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.115/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/home/lores/tic18/p010/dotnetMB/Escambo.Dommain/Escambo.Dommain.csproj": {
+    "/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.Dommain/Escambo.Dommain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/lores/tic18/p010/dotnetMB/Escambo.Dommain/Escambo.Dommain.csproj",
+        "projectUniqueName": "/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.Dommain/Escambo.Dommain.csproj",
         "projectName": "Escambo.Dommain",
-        "projectPath": "/home/lores/tic18/p010/dotnetMB/Escambo.Dommain/Escambo.Dommain.csproj",
-        "packagesPath": "/home/lores/.nuget/packages/",
-        "outputPath": "/home/lores/tic18/p010/dotnetMB/Escambo.Dommain/obj/",
+        "projectPath": "/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.Dommain/Escambo.Dommain.csproj",
+        "packagesPath": "/home/daniel-oliveira-da-silva/.nuget/packages/",
+        "outputPath": "/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.Dommain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/lores/.nuget/NuGet/NuGet.Config"
+          "/home/daniel-oliveira-da-silva/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -119,21 +113,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.114/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.115/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/home/lores/tic18/p010/dotnetMB/Escambo.Infra/Escambo.Infra.csproj": {
+    "/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.Infra/Escambo.Infra.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/lores/tic18/p010/dotnetMB/Escambo.Infra/Escambo.Infra.csproj",
+        "projectUniqueName": "/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.Infra/Escambo.Infra.csproj",
         "projectName": "Escambo.Infra",
-        "projectPath": "/home/lores/tic18/p010/dotnetMB/Escambo.Infra/Escambo.Infra.csproj",
-        "packagesPath": "/home/lores/.nuget/packages/",
-        "outputPath": "/home/lores/tic18/p010/dotnetMB/Escambo.Infra/obj/",
+        "projectPath": "/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.Infra/Escambo.Infra.csproj",
+        "packagesPath": "/home/daniel-oliveira-da-silva/.nuget/packages/",
+        "outputPath": "/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.Infra/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/lores/.nuget/NuGet/NuGet.Config"
+          "/home/daniel-oliveira-da-silva/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -145,8 +139,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "/home/lores/tic18/p010/dotnetMB/Escambo.Dommain/Escambo.Dommain.csproj": {
-                "projectPath": "/home/lores/tic18/p010/dotnetMB/Escambo.Dommain/Escambo.Dommain.csproj"
+              "/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.Dommain/Escambo.Dommain.csproj": {
+                "projectPath": "/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.Dommain/Escambo.Dommain.csproj"
               }
             }
           }
@@ -202,21 +196,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.114/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.115/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/home/lores/tic18/p010/dotnetMB/Escambo.WebAPI/Escambo.WebAPI.csproj": {
+    "/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.WebAPI/Escambo.WebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/lores/tic18/p010/dotnetMB/Escambo.WebAPI/Escambo.WebAPI.csproj",
+        "projectUniqueName": "/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.WebAPI/Escambo.WebAPI.csproj",
         "projectName": "Escambo.WebAPI",
-        "projectPath": "/home/lores/tic18/p010/dotnetMB/Escambo.WebAPI/Escambo.WebAPI.csproj",
-        "packagesPath": "/home/lores/.nuget/packages/",
-        "outputPath": "/home/lores/tic18/p010/dotnetMB/Escambo.WebAPI/obj/",
+        "projectPath": "/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.WebAPI/Escambo.WebAPI.csproj",
+        "packagesPath": "/home/daniel-oliveira-da-silva/.nuget/packages/",
+        "outputPath": "/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.WebAPI/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/lores/.nuget/NuGet/NuGet.Config"
+          "/home/daniel-oliveira-da-silva/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -228,11 +222,11 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "/home/lores/tic18/p010/dotnetMB/Escambo.Application/Escambo.Application.csproj": {
-                "projectPath": "/home/lores/tic18/p010/dotnetMB/Escambo.Application/Escambo.Application.csproj"
+              "/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.Application/Escambo.Application.csproj": {
+                "projectPath": "/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.Application/Escambo.Application.csproj"
               },
-              "/home/lores/tic18/p010/dotnetMB/Escambo.Infra/Escambo.Infra.csproj": {
-                "projectPath": "/home/lores/tic18/p010/dotnetMB/Escambo.Infra/Escambo.Infra.csproj"
+              "/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.Infra/Escambo.Infra.csproj": {
+                "projectPath": "/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.Infra/Escambo.Infra.csproj"
               }
             }
           }
@@ -251,15 +245,15 @@
               "target": "Package",
               "version": "[7.0.14, )"
             },
-            "Microsoft.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[7.0.15, )"
-            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
               "version": "[7.0.15, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[7.0.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -285,7 +279,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.114/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.115/RuntimeIdentifierGraph.json"
         }
       }
     }
