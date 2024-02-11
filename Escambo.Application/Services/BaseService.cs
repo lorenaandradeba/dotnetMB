@@ -8,10 +8,11 @@ namespace Escambo.Application.Services
 {
     public abstract class BaseService
     {
-        private readonly EscamboContext _context;
+        protected readonly EscamboContext _context;
         public BaseService(EscamboContext context)
         {
             _context = context;
         }
+        
     }
 }
