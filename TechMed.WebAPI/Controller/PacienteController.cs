@@ -8,7 +8,7 @@ using TechMed.Application.Service.Interface;
 namespace TechMed.WebAPI.Controller;
 
 [ApiController]
-[Route("Paciente")]
+[Route("[controller]")]
 public class PacienteController: ControllerBase
 {
     protected readonly IPacienteService _pacienteService;
@@ -18,12 +18,12 @@ public class PacienteController: ControllerBase
     }
 
 
-    [HttpGet ("Pacientes")]
+    [HttpGet ("Paciente/All")]
     public IActionResult GetAll(){
         return Ok(Pacientes);
-    }   
+    }       
 
-    [HttpPost ("Paciente")]
+    [HttpPost ("Paciente/New")]
     public IActionResult Create(PacienteInputModel paciente){
         _pacienteService.Create(paciente);
         return Ok();
@@ -39,7 +39,7 @@ public class PacienteController: ControllerBase
         return NotFound();
     }
 
-    [HttpDelete ("Pacientes/{id}")]
+    [HttpDelete ("Paciente/Del/{id}")]
     public IActionResult Delete(int id){
         _pacienteService.Delete(id);
         return Ok();

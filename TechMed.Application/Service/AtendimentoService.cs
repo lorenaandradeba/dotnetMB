@@ -8,53 +8,61 @@ using TechMed.Infrastructure.Context;
 namespace TechMed.Application.Service;
 
 
-public class AtendimentoService: BaseService, IAtendimentoService
+public class AtendimentoService : BaseService, IAtendimentoService
 {
     protected readonly IMedicoService _medicoService;
     protected readonly IPacienteService _pacienteService;
-    public AtendimentoService(TechMedContext context, IMedicoService medicoService, IPacienteService pacienteService) : base(context) {
+    protected readonly IExameService _exameService;
+    
+
+    public AtendimentoService(TechMedContext context, IMedicoService medicoService, IPacienteService pacienteService,IExameService exameService) : base(context)
+    {
         _medicoService = medicoService;
         _pacienteService = pacienteService;
-     } //Passas o contexto 
+        _exameService = exameService;
+    } //Passas o contexto 
 
     public List<AtendimentoViewModel> GetAll()
     {
-      
-    
+
+
         var _atendimentos = _context.Atendimentos.Select(a => new AtendimentoViewModel
         {
             AtendimentoId = a.AtendimentoId,
             DataHoraInicio = a.DataHoraInicio,
             SuspeitaInicial = a.SuspeitaInicial,
-            Medico = new MedicoViewModel { MedicoId = a.MedicoId, Nome = a.Medico.Nome,CRM = a.Medico.CRM },
+            Medico = new MedicoViewModel { MedicoId = a.MedicoId, Nome = a.Medico.Nome, CRM = a.Medico.CRM },
             Paciente = new PacienteViewModel { PacienteId = a.PacienteId, Nome = a.Paciente.Nome },
-            
+
         }).ToList();
+
 
         return _atendimentos;
     }
 
+   
+   
     public AtendimentoViewModel GetById(int id)
     {
 
-        var _atendimentos = _context.Atendimentos.Find(id);
-        if (_atendimentos is not null)
+        var _atendimento = _context.Atendimentos.FirstOrDefault(a => a.AtendimentoId == id);
+        var medico = _medicoService.GetById(_atendimento.MedicoId);
+        var paciente = _pacienteService.GetById(_atendimento.PacienteId);
+        // var exames = _examesService.GetByAtendimentoId(_atendimento.AtendimentoId);
+        if (_atendimento is not null)
         {
-            return new AtendimentoViewModel
-            {
-
-                AtendimentoId = _atendimentos.AtendimentoId,
-                DataHoraInicio = _atendimentos.DataHoraInicio,
-                DataHoraFim = _atendimentos.DataHoraFim,
-                SuspeitaInicial = _atendimentos.SuspeitaInicial,
-                Diagnostico = _atendimentos.Diagnostico,
-
-                Medico = _medicoService.GetById(_atendimentos.MedicoId),
-                Paciente = _pacienteService.GetById(_atendimentos.PacienteId),
+            var atendimento = new AtendimentoViewModel{
+                AtendimentoId = _atendimento.AtendimentoId,
+                Medico = medico,
+                Paciente = paciente,
+                DataHoraFim = _atendimento.DataHoraFim,
+                SuspeitaInicial = _atendimento.SuspeitaInicial,
 
             };
+            return atendimento;
         }
         return null;
+
     }
 
     public int Create(AtendimentoInputModel _newAtendimento)
@@ -75,22 +83,29 @@ public class AtendimentoService: BaseService, IAtendimentoService
                 DataHoraInicio = DateTimeOffset.Now,
                 SuspeitaInicial = _newAtendimento.SuspeitaInicial,
             };
-             _context.Atendimentos.Add(_atendimento);
+            _context.Atendimentos.Add(_atendimento);
             _context.SaveChanges();
-            
+
             return _atendimento.AtendimentoId;
-       }
-       return 0;
+        }
+        return 0;
     }
 
     public void Delete(int id)
     {
-        throw new NotImplementedException();
+        var _atendimento = _context.Atendimentos.Find(id);
+        if(_atendimento is null) return;
+
+        _context.Atendimentos.Remove(_atendimento);
+        
     }
 
 
     public void Update(int id, AtendimentoInputModel Entity)
     {
-        throw new NotImplementedException();
+        var _atendimento = _context.Atendimentos.Find(id);
+
+        return;
     }
+
 }

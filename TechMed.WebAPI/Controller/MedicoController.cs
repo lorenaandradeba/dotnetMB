@@ -6,7 +6,7 @@ using TechMed.Application.Service.Interface;
 namespace TechMed.WebAPI.Controller;
 
 [ApiController]
-[Route("Medico")]
+[Route("[controller]")]
 public class MedicoContoller : ControllerBase
 {
     
@@ -17,7 +17,7 @@ public class MedicoContoller : ControllerBase
         _medicoService = service;
     }
 
-    [HttpGet ("Medicos")]
+    [HttpGet ("Medico/All")]
     public ActionResult GetAll(){
         return Ok(Medicos);
     }
@@ -25,10 +25,14 @@ public class MedicoContoller : ControllerBase
     [HttpGet ("Medico/{id}")]
     public ActionResult GetById(int id)
     {
-        throw new NotImplementedException();
+        var _medico = _medicoService.GetById(1);
+        if(_medico is null){
+            return NotFound();
+        }
+        return Ok(_medico);
     }
 
-    [HttpPost ("Medico")]
+    [HttpPost ("Medico/New")]
     public ActionResult Create(MedicoInputModel medico)
     {
         _medicoService.Create(medico);

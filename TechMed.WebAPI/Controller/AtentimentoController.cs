@@ -5,7 +5,7 @@ using TechMed.Application.Service.Interface;
 namespace TechMed.WebAPI.Controller;
 
 [ApiController]
-[Route("Atendimento")]
+[Route("[controller]")]
 public class AtendimentoControler: ControllerBase
 {
     protected IAtendimentoService _atendimentoService;
@@ -15,7 +15,7 @@ public class AtendimentoControler: ControllerBase
     }
 
 
-    [HttpGet ("Atenditmentos")]
+    [HttpGet ("Atenditmento/all")]
     public IActionResult GetAll(){
         if (Atendimentos is not null)
             return Ok(Atendimentos);
@@ -27,13 +27,13 @@ public class AtendimentoControler: ControllerBase
 
     public IActionResult GetById(int id){
         var _atendimento = _atendimentoService.GetById(id);
-        if (_atendimento is not null)
-            return Ok(_atendimento);
+                if (_atendimento is null)
+            return NotFound();
         
-        return NotFound();
+        return Ok(_atendimento);
     }
 
-    [HttpPost ("Atendimentos")]
+    [HttpPost ("Atendimento/New")]
     public IActionResult Create(AtendimentoInputModel atendimento){
         var id = _atendimentoService.Create(atendimento);
         if (id > 0)
@@ -42,5 +42,30 @@ public class AtendimentoControler: ControllerBase
         return BadRequest();
     }
 
+    [HttpGet ("Atendimentos/Medico/{id}")]
+    public IActionResult AtendimentoGetByIdMedico(int id){
+        var atendimentosMedicos = Atendimentos.Where(a => a.Medico.MedicoId == id).ToList();
+        if (atendimentosMedicos is null) return NotFound();
+       
+        return Ok(atendimentosMedicos);   
+    }
+
+    [HttpGet ("Atendimentos/Paciente/{id}")]
+    public IActionResult AtendimentoGetByIdPaciente(int id){
+        var atendimentoPacientes = Atendimentos.Where(a => a.Paciente.PacienteId == id).ToList();
+
+        if (atendimentoPacientes is null) return NotFound();
+
+        return Ok(atendimentoPacientes);
+    }
+
+    [HttpGet ("Atendimentos/Exame/{id}")]
+    public IActionResult AtendimentoaGetByIdExame(int id){
+        var atendimentosExame = Atendimentos.Where(a => a.Exames.Any(e => e.ExameId == id)).ToList();
+        if (atendimentosExame is null) return NotFound();
+
+        return Ok(atendimentosExame);
+    }
 }
+
 

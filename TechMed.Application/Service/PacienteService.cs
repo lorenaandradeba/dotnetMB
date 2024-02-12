@@ -11,13 +11,15 @@ public class PacienteService : BaseService, IPacienteService
    
     public PacienteService(TechMedContext context) : base(context){} //pasando o contexto para o construtor da classe base
    
-    public int Create(PacienteInputModel medico)
+    public int Create(PacienteInputModel paciente)
     {
-        var id = _context.Pacientes.Count() > 0 ? _context.Pacientes.Max(m => m.PacienteId) + 1 : 1;
+        var id = _context.Pacientes.Count() > 0 ? _context.Pacientes.Max(p => p.PacienteId) + 1 : 1;
         var _paciente = new Paciente
         {
             PacienteId = id,
-            Nome = medico.Name
+            Nome = paciente.Name,
+            CPF = paciente.CPF, 
+        
         };
         _context.Pacientes.Add(_paciente);
 
@@ -39,10 +41,11 @@ public class PacienteService : BaseService, IPacienteService
 
     public List<PacienteViewModel> GetAll()
     {
-       var _pacientes = _context.Pacientes.Select(m => new PacienteViewModel
+       var _pacientes = _context.Pacientes.Select(p => new PacienteViewModel
         {
-            PacienteId = m.PacienteId,
-            Nome = m.Nome
+            PacienteId = p.PacienteId,
+            Nome = p.Nome,
+            CPF = p.CPF
         }).ToList();
 
         return _pacientes;
@@ -60,6 +63,8 @@ public class PacienteService : BaseService, IPacienteService
 
     public void Update(int id, PacienteInputModel paciente)
     {
-        throw new NotImplementedException();
+      var _paciente = _context.Pacientes.Find(id);
+        _paciente.Nome = paciente.Name;
+        _paciente.CPF = paciente.CPF;
     }
 }

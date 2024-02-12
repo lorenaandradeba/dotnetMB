@@ -39,13 +39,13 @@ public class MedicoService: BaseService, IMedicoService
             MedicoId = m.MedicoId,
             Nome = m.Nome,
             CRM = m.CRM,
+
        });
 
        return _medicos.ToList();
     }
 
-
-    public MedicoViewModel GetById(int id)
+    public MedicoViewModel? GetById(int id)
     {
         var _medico = _context.Medicos.Find(id);
         if(_medico is not null){
@@ -54,8 +54,14 @@ public class MedicoService: BaseService, IMedicoService
         return null;
     }
 
-    public void Update(int id, MedicoInputModel Entity)
+    public void Update(int id, MedicoInputModel medico)
     {
-        throw new NotImplementedException();
+        var _medico = _context.Medicos.Find(id);
+        
+        _medico.Nome = medico.Name;
+        _medico.CRM = medico.CRM;
+        _medico.UpdatedAt = DateTime.Now;
+        _context.Medicos.Update(_medico);
+        _context.SaveChanges();
     }
 }

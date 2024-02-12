@@ -13,3 +13,5 @@
 /home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/TechMed.Infrastructure/obj/Debug/net7.0/refint/TechMed.Infrastructure.dll
 /home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/TechMed.Infrastructure/obj/Debug/net7.0/TechMed.Infrastructure.pdb
 /home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/TechMed.Infrastructure/obj/Debug/net7.0/ref/TechMed.Infrastructure.dll
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/TechMed.Infrastructure/bin/Debug/net7.0/TechMed.Infrastructure.runtimeconfig.json
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/TechMed.Infrastructure/obj/Debug/net7.0/TechMed.Infrastructure.genruntimeconfig.cache
