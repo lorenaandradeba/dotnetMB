@@ -57,7 +57,6 @@ public class AtendimentoService : BaseService, IAtendimentoService
                 Paciente = paciente,
                 DataHoraFim = _atendimento.DataHoraFim,
                 SuspeitaInicial = _atendimento.SuspeitaInicial,
-
             };
             return atendimento;
         }

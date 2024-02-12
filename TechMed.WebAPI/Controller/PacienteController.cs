@@ -7,8 +7,9 @@ using TechMed.Application.Service.Interface;
 
 namespace TechMed.WebAPI.Controller;
 
+[Route("Paciente")]
 [ApiController]
-[Route("[controller]")]
+
 public class PacienteController: ControllerBase
 {
     protected readonly IPacienteService _pacienteService;

@@ -5,45 +5,50 @@ using TechMed.Application.Service.Interface;
 
 namespace TechMed.WebAPI.Controller;
 
+[Route("Medico")]
 [ApiController]
-[Route("[controller]")]
+
 public class MedicoContoller : ControllerBase
 {
-    
+
     protected readonly IMedicoService? _medicoService;
     public List<MedicoViewModel> Medicos => _medicoService.GetAll();
 
-    public MedicoContoller(IMedicoService service){
+    public MedicoContoller(IMedicoService service)
+    {
         _medicoService = service;
     }
 
-    [HttpGet ("Medico/All")]
-    public ActionResult GetAll(){
+    [HttpGet("Medico/All")]
+    public ActionResult GetAll()
+    {
         return Ok(Medicos);
     }
 
-    [HttpGet ("Medico/{id}")]
+    [HttpGet("Medico/{id}")]
     public ActionResult GetById(int id)
     {
         var _medico = _medicoService.GetById(1);
-        if(_medico is null){
+        if (_medico is null)
+        {
             return NotFound();
         }
         return Ok(_medico);
     }
 
-    [HttpPost ("Medico/New")]
+    [HttpPost("Medico/New")]
     public ActionResult Create(MedicoInputModel medico)
     {
         _medicoService.Create(medico);
         return Ok();
-        
+
     }
 
-    [HttpDelete ("Medico/{id}")]
-    public void Delete(int id)
+    [HttpDelete("Medico/{id}/Delete")]
+    public ActionResult Delete(int id)
     {
-        throw new NotImplementedException();
+        _medicoService.Delete(id);
+        return Ok();
     }
 
 }

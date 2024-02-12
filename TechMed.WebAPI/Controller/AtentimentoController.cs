@@ -4,8 +4,9 @@ using TechMed.Application.Model.View;
 using TechMed.Application.Service.Interface;
 namespace TechMed.WebAPI.Controller;
 
+[Route("Atendimento")]
+
 [ApiController]
-[Route("[controller]")]
 public class AtendimentoControler: ControllerBase
 {
     protected IAtendimentoService _atendimentoService;

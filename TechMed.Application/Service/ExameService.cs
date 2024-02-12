@@ -7,21 +7,23 @@ using TechMed.Application.Service.Interface;
 using TechMed.Core.Entities;
 using TechMed.Infrastructure.Context;
 
-public class ExameService :BaseService, IExameService
+public class ExameService : BaseService, IExameService
 {
-    
 
-    public ExameService(TechMedContext context):base(context){ 
-       
+
+    public ExameService(TechMedContext context) : base(context)
+    {
+
     }
-   
+
     public int Create(int AtendimentoId, ExameInputModel exame)
     {
 
         var _atendimento = _context.Atendimentos.Find(AtendimentoId);
         var _id = _context.Exames.Count() > 0 ? _context.Exames.Max(e => e.ExameId) + 1 : 1;
-        if(_atendimento is null) return 0;
-        var _exame = new Exame{
+        if (_atendimento is null) return 0;
+        var _exame = new Exame
+        {
             ExameId = _id,
             Nome = exame.Nome,
             DataHora = exame.DataHora,
@@ -36,42 +38,63 @@ public class ExameService :BaseService, IExameService
         return _exame.ExameId;
     }
 
-    public int Create(ExameInputModel Enity)
-    {
-        throw new NotImplementedException();
-    }
+
 
     public void Delete(int id)
     {
         var exame = _context.Exames.Find(id);
-        if(exame is not null){
+        if (exame is not null)
+        {
             _context.Exames.Remove(exame);
         }
     }
 
     public List<ExameViewModel> GetAll()
     {
-       var exames = _context.Exames.Select(e => new ExameViewModel{
-           ExameId = e.ExameId,
-           ExameNome = e.Nome,
-           DataHora = e.DataHora,
-           ResultadoDescricao = e.ResultadoDescricao,
-           Local = e.Local,
+        var exames = _context.Exames.Select(e => new ExameViewModel
+        {
+            ExameId = e.ExameId,
+            ExameNome = e.Nome,
+            DataHora = e.DataHora,
+            ResultadoDescricao = e.ResultadoDescricao,
+            Local = e.Local,
 
-       }).ToList();
+        }).ToList();
 
-       return exames;
+        return exames;
     }
 
-  
 
     public ExameViewModel? GetById(int id)
     {
-        throw new NotImplementedException();
+        var exame = _context.Exames
+            .Where(e => e.ExameId == id)
+            .Select(e => new ExameViewModel
+            {
+                ExameId = e.ExameId,
+                ExameNome = e.Nome,
+                DataHora = e.DataHora,
+                ResultadoDescricao = e.ResultadoDescricao,
+                Local = e.Local
+            })
+            .FirstOrDefault();
+
+        return exame;
     }
 
-    public void Update(int id, ExameInputModel Entity)
+    public void Update(int id, ExameInputModel entity)
     {
-        throw new NotImplementedException();
+        var exame = _context.Exames.Find(id);
+        if (exame != null)
+        {
+            exame.Nome = entity.Nome;
+            exame.DataHora = entity.DataHora;
+            exame.Valor = entity.Valor;
+            exame.Local = entity.Local;
+
+            _context.Exames.Update(exame);
+            _context.SaveChanges();
+        }
     }
+
 }
