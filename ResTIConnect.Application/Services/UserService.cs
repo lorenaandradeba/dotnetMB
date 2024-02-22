@@ -10,6 +10,7 @@ using ResTIConnect.Infra.Data.Context;
 using ResTIConnect.Domain.Entities;
 using ResTIConnect.Domain.Exceptions;
 using ResTIConnect.Application.InputModels;
+using System.Text;
 
 
 namespace ResTIConnect.Application.Services
@@ -65,9 +66,12 @@ namespace ResTIConnect.Application.Services
 
         public int Create(NewUserInputModel user)
         {
+            var decodedUsernamePassword = Encoding.UTF8.GetString(Convert.FromBase64String(user.Password));
             var _user = new User
             {
                 Name = user.Name,
+                Email = user.Email,
+                Password = user.Password,
                 EnderecoId = user.EnderecoId,
             };
             
