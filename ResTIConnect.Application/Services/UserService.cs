@@ -66,12 +66,12 @@ namespace ResTIConnect.Application.Services
 
         public int Create(NewUserInputModel user)
         {
-            var decodedUsernamePassword = Encoding.UTF8.GetString(Convert.FromBase64String(user.Password));
+            var encodingPassword = Encoding.UTF8.GetString(Convert.FromBase64String(user.Password));
             var _user = new User
             {
                 Name = user.Name,
                 Email = user.Email,
-                Password = user.Password,
+                Password = encodingPassword,
                 EnderecoId = user.EnderecoId,
             };
             
