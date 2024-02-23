@@ -66,10 +66,27 @@ namespace MvcMovie.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Title,ReleaseDate,Genre,Price,StudioId,ArtistId")] Movie movie)
+        public async Task<IActionResult> Create([Bind("Id,Title,ReleaseDate,Genre,Price,StudioId,ArtistId,MoviesId")] Movie movie)
         {
             if (ModelState.IsValid)
             {
+                // Remova os Artists que não estão mais selecionados
+                    var artistsToRemove = movie.Artists.Where(a => !ViewBag.Artists.Contains(a.Id)).ToList();
+
+                    // Remova os Artists que não estão mais selecionados
+                    foreach (var artist in artistsToRemove)
+                    {
+                        movie.Artists.Remove(artist);
+                    }
+                    // Adicione os novos Artists que foram selecionados
+                    foreach (var artistId in ViewBag.Artists)
+                    {
+                        if (!movie.Artists.Any(a => a.Id == artistId))
+                        {
+                            var artistToAdd = await _context.Artist.FindAsync(artistId);
+                            movie.Artists.Add(artistToAdd);
+                        }
+                    }
                 _context.Add(movie);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -105,7 +122,7 @@ namespace MvcMovie.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,ReleaseDate,Genre,Price,StudioId,ArtistId")] Movie movie)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,ReleaseDate,Genre,Price,StudioId,ArtistId,MoviesId")] Movie movie, List<int> selectedArtists)
         {
             if (id != movie.Id)
             {
@@ -116,6 +133,23 @@ namespace MvcMovie.Controllers
             {
                 try
                 {
+                    // Remova os Artists que não estão mais selecionados
+                    var artistsToRemove = movie.Artists.Where(a => !selectedArtists.Contains(a.Id)).ToList();
+
+                    // Remova os Artists que não estão mais selecionados
+                    foreach (var artist in artistsToRemove)
+                    {
+                        movie.Artists.Remove(artist);
+                    }
+                    // Adicione os novos Artists que foram selecionados
+                    foreach (var artistId in selectedArtists)
+                    {
+                        if (!movie.Artists.Any(a => a.Id == artistId))
+                        {
+                            var artistToAdd = await _context.Artist.FindAsync(artistId);
+                            movie.Artists.Add(artistToAdd);
+                        }
+                    }
                     _context.Update(movie);
                     await _context.SaveChangesAsync();
                 }
