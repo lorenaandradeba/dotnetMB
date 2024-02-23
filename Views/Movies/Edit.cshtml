@@ -43,8 +43,9 @@
                 <label asp-for="Artists" class="control-label"></label><br>
                 @foreach (var artist in ViewBag.Artists)
                 {
-                    <input type="checkbox" name="Artists" value="@artist.Id" @(Model.Artists.Any(a => a.Id == artist.Id) ? "checked" : "") /> @artist.Name <br />
+                    <input type="checkbox" name="selectedArtists" value="@artist.Id" @(Model.Artists.Any(a => a.Id == artist.Id) ? "checked" : "") /> @artist.Name <br />
                 }
+
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />

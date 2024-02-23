@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using dotnetMB.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -66,7 +67,7 @@ namespace MvcMovie.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Title,ReleaseDate,Genre,Price,StudioId,ArtistId")] Movie movie, List<int> selectedArtists)
+        public async Task<IActionResult> Create([Bind("Id,Title,ReleaseDate,Genre,Price,StudioId,ArtistId,ArtistMovie.ArtistsId,ArtistMovie.MoviesId")] Movie movie, List<int> selectedArtists)
         {
             if (ModelState.IsValid)
             {
@@ -122,7 +123,7 @@ namespace MvcMovie.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,ReleaseDate,Genre,Price,StudioId,ArtistId")] Movie movie, List<int> selectedArtists)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,ReleaseDate,Genre,Price,StudioId,ArtistId,ArtistMovie.ArtistsId, ArtistMovie.MoviesId")] Movie movie, List<int> selectedArtists)
         {
             if (id != movie.Id)
             {
@@ -147,10 +148,12 @@ namespace MvcMovie.Controllers
                         if (!movie.Artists.Any(a => a.Id == artistId))
                         {
                             var artistToAdd = await _context.Artist.FindAsync(artistId);
-                            movie.Artists.Add(artistToAdd);
+                            movie.Artists.Add(artistToAdd!);
                         }
                     }
+
                     _context.Update(movie);
+
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
