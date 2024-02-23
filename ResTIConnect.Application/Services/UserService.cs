@@ -10,14 +10,12 @@ using ResTIConnect.Infra.Data.Context;
 using ResTIConnect.Domain.Entities;
 using ResTIConnect.Domain.Exceptions;
 using ResTIConnect.Application.InputModels;
-
+using ResTIConnect.Application.Services.Security;
 
 namespace ResTIConnect.Application.Services
 {
     public class UserService : IUserService
     {
-
-
         private readonly ResTIConnectContext _context;
         public UserService(ResTIConnectContext context)
         {
@@ -65,9 +63,12 @@ namespace ResTIConnect.Application.Services
 
         public int Create(NewUserInputModel user)
         {
+            var passwordHash = Utils.HashPassword(user.Password);
             var _user = new User
             {
                 Name = user.Name,
+                Email = user.Email,
+                Password = passwordHash,
                 EnderecoId = user.EnderecoId,
             };
             
