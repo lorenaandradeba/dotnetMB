@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using MvcMovie.Models;
+using dotnetMB.Models;
 
 namespace MvcMovie.Data
 {
@@ -17,5 +18,9 @@ namespace MvcMovie.Data
         public DbSet<MvcMovie.Models.Movie> Movie { get; set; } = default!;
 
         public DbSet<MvcMovie.Models.User> User { get; set; } = default!;
+
+        public DbSet<dotnetMB.Models.Studio> Studio { get; set; } = default!;
+
+        public DbSet<dotnetMB.Models.Artist> Artist { get; set; } = default!;
     }
 }

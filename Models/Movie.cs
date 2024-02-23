@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using dotnetMB.Models;
 
 namespace MvcMovie.Models;
 
@@ -11,4 +12,7 @@ public class Movie
     public DateTime ReleaseDate { get; set; }
     public string? Genre { get; set; }
     public decimal Price { get; set; }
+    public int StudioId { get; set; }
+    public Studio? Studio { get; set; }
+    public ICollection<Artist> Artists { get; set; } = new List<Artist>();
 }
