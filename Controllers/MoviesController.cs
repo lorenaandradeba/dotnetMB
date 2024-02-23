@@ -23,7 +23,9 @@ namespace MvcMovie.Controllers
         public async Task<IActionResult> Index()
         {
               return _context.Movie != null ? 
-                          View(await _context.Movie.ToListAsync()) :
+                          View(await _context.Movie
+                          .Include(m => m.Studio).Include(m => m.Artists)
+                          .ToListAsync()) :
                           Problem("Entity set 'MvcMovieContext.Movie'  is null.");
         }
 
@@ -36,6 +38,7 @@ namespace MvcMovie.Controllers
             }
 
             var movie = await _context.Movie
+                .Include(m => m.Studio).Include(m => m.Artists)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (movie == null)
             {
@@ -48,6 +51,13 @@ namespace MvcMovie.Controllers
         // GET: Movies/Create
         public IActionResult Create()
         {
+            // Obtenha a lista de Studios e artists do seu banco de dados ou serviço
+            var studios = _context.Studio.ToList();
+            var artists = _context.Artist.ToList();
+            
+            ViewBag.Studios = studios;
+            ViewBag.Artists = artists;
+
             return View();
         }
 
@@ -56,7 +66,7 @@ namespace MvcMovie.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Title,ReleaseDate,Genre,Price")] Movie movie)
+        public async Task<IActionResult> Create([Bind("Id,Title,ReleaseDate,Genre,Price,StudioId,ArtistId")] Movie movie)
         {
             if (ModelState.IsValid)
             {
@@ -75,11 +85,18 @@ namespace MvcMovie.Controllers
                 return NotFound();
             }
 
-            var movie = await _context.Movie.FindAsync(id);
+            var movie = await _context.Movie.Include(m => m.Artists).FirstOrDefaultAsync(m => m.Id == id);
             if (movie == null)
             {
                 return NotFound();
             }
+            
+            // Obtenha a lista de Studios e artists do seu banco de dados ou serviço
+            var studios = _context.Studio.ToList();
+            var artists = _context.Artist.ToList();
+            
+            ViewBag.Studios = studios;
+            ViewBag.Artists = artists;
             return View(movie);
         }
 
@@ -88,7 +105,7 @@ namespace MvcMovie.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,ReleaseDate,Genre,Price")] Movie movie)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,ReleaseDate,Genre,Price,StudioId,ArtistId")] Movie movie)
         {
             if (id != movie.Id)
             {

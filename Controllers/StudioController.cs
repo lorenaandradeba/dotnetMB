@@ -19,7 +19,7 @@ namespace MvcMovie.Controllers
             _context = context;
         }
 
-        // GET: Studi
+        // GET: Studio
         public async Task<IActionResult> Index()
         {
               return _context.Studio != null ? 
@@ -27,7 +27,7 @@ namespace MvcMovie.Controllers
                           Problem("Entity set 'MvcMovieContext.Studio'  is null.");
         }
 
-        // GET: Studi/Details/5
+        // GET: Studio/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null || _context.Studio == null)
@@ -45,13 +45,13 @@ namespace MvcMovie.Controllers
             return View(studio);
         }
 
-        // GET: Studi/Create
+        // GET: Studio/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Studi/Create
+        // POST: Studio/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -67,7 +67,7 @@ namespace MvcMovie.Controllers
             return View(studio);
         }
 
-        // GET: Studi/Edit/5
+        // GET: Studio/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null || _context.Studio == null)
@@ -83,7 +83,7 @@ namespace MvcMovie.Controllers
             return View(studio);
         }
 
-        // POST: Studi/Edit/5
+        // POST: Studio/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -118,7 +118,7 @@ namespace MvcMovie.Controllers
             return View(studio);
         }
 
-        // GET: Studi/Delete/5
+        // GET: Studio/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null || _context.Studio == null)
@@ -136,7 +136,7 @@ namespace MvcMovie.Controllers
             return View(studio);
         }
 
-        // POST: Studi/Delete/5
+        // POST: Studio/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)

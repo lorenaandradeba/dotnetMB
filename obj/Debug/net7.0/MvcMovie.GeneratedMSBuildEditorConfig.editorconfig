@@ -84,24 +84,24 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/lorena-andrade-santos/Documentos/modulo5/atividade/dotnetMB/Views/Studi/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3R1ZGkvQ3JlYXRlLmNzaHRtbA==
+[/home/lorena-andrade-santos/Documentos/modulo5/atividade/dotnetMB/Views/Studio/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3R1ZGlvL0NyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/lorena-andrade-santos/Documentos/modulo5/atividade/dotnetMB/Views/Studi/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3R1ZGkvRGVsZXRlLmNzaHRtbA==
+[/home/lorena-andrade-santos/Documentos/modulo5/atividade/dotnetMB/Views/Studio/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3R1ZGlvL0RlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/lorena-andrade-santos/Documentos/modulo5/atividade/dotnetMB/Views/Studi/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3R1ZGkvRGV0YWlscy5jc2h0bWw=
+[/home/lorena-andrade-santos/Documentos/modulo5/atividade/dotnetMB/Views/Studio/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3R1ZGlvL0RldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/lorena-andrade-santos/Documentos/modulo5/atividade/dotnetMB/Views/Studi/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3R1ZGkvRWRpdC5jc2h0bWw=
+[/home/lorena-andrade-santos/Documentos/modulo5/atividade/dotnetMB/Views/Studio/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3R1ZGlvL0VkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/lorena-andrade-santos/Documentos/modulo5/atividade/dotnetMB/Views/Studi/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3R1ZGkvSW5kZXguY3NodG1s
+[/home/lorena-andrade-santos/Documentos/modulo5/atividade/dotnetMB/Views/Studio/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU3R1ZGlvL0luZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [/home/lorena-andrade-santos/Documentos/modulo5/atividade/dotnetMB/Views/User/Create.cshtml]
