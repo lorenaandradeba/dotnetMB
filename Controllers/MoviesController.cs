@@ -71,14 +71,6 @@ namespace MvcMovie.Controllers
         {
             if (ModelState.IsValid)
             {
-                // Remova os Artists que não estão mais selecionados
-                    var artistsToRemove = movie.Artists.Where(a => !selectedArtists.Contains(a.Id)).ToList();
-
-                    // Remova os Artists que não estão mais selecionados
-                    foreach (var artist in artistsToRemove)
-                    {
-                        movie.Artists.Remove(artist);
-                    }
                     // Adicione os novos Artists que foram selecionados
                     foreach (var artistId in selectedArtists)
                     {
@@ -142,6 +134,10 @@ namespace MvcMovie.Controllers
                     {
                         movie.Artists.Remove(artist);
                     }
+
+                    _context.Update(movie);
+                    await _context.SaveChangesAsync();
+
                     // Adicione os novos Artists que foram selecionados
                     foreach (var artistId in selectedArtists)
                     {
