@@ -6,6 +6,7 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using ResTIConnect.Application.Services;
 using ResTIConnect.Application.Services.Interfaces;
+using ResTIConnect.Infra.Data.Auth;
 using ResTIConnect.Infra.Data.Context;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -18,6 +19,7 @@ builder.Services.AddScoped<IEnderecoService, EnderecoService>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<ISistemaService, SistemaService>();
 builder.Services.AddScoped<ILoginService, LoginService>();
+builder.Services.AddScoped<IAuthService, AuthService>();
 
 builder.Services.AddDbContext<ResTIConnectContext>(options => {
     var connectionString = builder.Configuration.GetConnectionString("ResTIConnect");
