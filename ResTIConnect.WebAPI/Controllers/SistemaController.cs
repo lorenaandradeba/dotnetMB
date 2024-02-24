@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using ResTIConnect.Application.InputModels;
@@ -20,12 +21,14 @@ namespace ResTIConnect.WebAPI.Controllers
         public SistemaController(ISistemaService sistemaService) => _sistemaService = sistemaService;
 
         [HttpGet("sistemas")]
+        [Authorize]
         public IActionResult Get()
         {
 
             return Ok(Sistemas);
         }
         [HttpGet("sistema/{id}")]
+        [Authorize]
         public IActionResult GetById(int id)
         {
             var sistema = _sistemaService.GetById(id);
@@ -34,6 +37,7 @@ namespace ResTIConnect.WebAPI.Controllers
         
 
         [HttpPost("sistema")]
+        [Authorize]
         public IActionResult Post([FromBody] NewSistemaInputModel sistema)
         {
             _sistemaService.Create(sistema);
@@ -42,6 +46,7 @@ namespace ResTIConnect.WebAPI.Controllers
 
         }
         [HttpGet("system/user/{id}")]// – sistemas com alguma relação com um determinado usuário 
+        [Authorize]
         public IActionResult GetSistemasByUserId(int userId)
         {
             var sistemas = _sistemaService.GetUserById(userId);

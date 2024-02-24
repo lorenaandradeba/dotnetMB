@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using ResTIConnect.Application.InputModels;
 using ResTIConnect.Application.Services.Interfaces;
@@ -20,12 +21,14 @@ namespace ResTIConnect.WebAPI.Controllers
 
 
         [HttpGet("perfis")]
+        [Authorize]
         public IActionResult Get()
         {
             return Ok(Perfis);
         }
 
         [HttpGet("perfil/{id}")]
+        [Authorize]
         public IActionResult GetById(int id)
         {
             var perfil = _perfilService.GetById(id);
@@ -34,6 +37,7 @@ namespace ResTIConnect.WebAPI.Controllers
 
 
         [HttpPost("perfil")]
+        [Authorize]
         public IActionResult Post([FromBody] NewPerfilInputModel perfil)
         {
             _perfilService.Create(perfil);
@@ -43,6 +47,7 @@ namespace ResTIConnect.WebAPI.Controllers
         }
 
         [HttpPut("perfil/{id}")]
+        [Authorize]
         public IActionResult Put(int id, [FromBody] NewPerfilInputModel perfil)
         {
             if (_perfilService.GetById(id) == null)
@@ -52,6 +57,7 @@ namespace ResTIConnect.WebAPI.Controllers
         }
 
         [HttpDelete("perfil/{id}")]
+        [Authorize]
         public IActionResult Delete(int id)
         {
             if (_perfilService.GetById(id) == null)
