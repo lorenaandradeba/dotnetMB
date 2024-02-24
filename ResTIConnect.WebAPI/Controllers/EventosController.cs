@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using ResTIConnect.Application.InputModels;
@@ -20,12 +21,14 @@ namespace ResTIConnect.WebAPI.Controllers
         public EventosController(IEventoService eventoService) => _eventoService = eventoService;
 
         [HttpGet("eventos")]
+        [Authorize]
         public IActionResult Get()
         {
 
             return Ok(Eventos);
         }
         [HttpGet("evento/{id}")]
+        [Authorize]
         public IActionResult GetById(int id)
         {
             var evento = _eventoService.GetById(id);
@@ -34,6 +37,7 @@ namespace ResTIConnect.WebAPI.Controllers
         
 
         [HttpPost("evento")]
+        [Authorize]
         public IActionResult Post([FromBody] NewEventoInputModel evento)
         {
             _eventoService.Create(evento);
