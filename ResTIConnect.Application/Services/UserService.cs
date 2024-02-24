@@ -174,6 +174,16 @@ namespace ResTIConnect.Application.Services
 
             return _user;
         }
+        public bool AutenticateUser(string email, string password)
+        {
+            var _user = _context.Users.FirstOrDefault(u => u.Email == email && u.Password == Utils.HashPassword(password));
+
+            if (_user is null)
+                return false;
+
+            return (_user.Email == email);
+        }
+        
         public void Update(int id, NewUserInputModel user)
         {
             var _user = GetByDbId(id);
