@@ -71,7 +71,7 @@ namespace ResTIConnect.Application.Services
                 Password = passwordHash,
                 EnderecoId = user.EnderecoId,
             };
-            
+
             _context.Users.Add(_user);
 
             _context.SaveChanges();
@@ -183,7 +183,7 @@ namespace ResTIConnect.Application.Services
 
             return (_user.Email == email);
         }
-        
+
         public void Update(int id, NewUserInputModel user)
         {
             var _user = GetByDbId(id);
@@ -204,55 +204,70 @@ namespace ResTIConnect.Application.Services
 
             _user.Sistemas!.Add(_sistema);
             _context.SaveChanges();
-            
+
+        }
+        public bool IsUserAdmin(string email)
+        {
+            // Busca o usuário pelo e-mail
+            var user = _context.Users.Include(u => u.Perfis)
+                                      .FirstOrDefault(u => u.Email == email);
+
+            if (user != null)
+            {
+                // Verifica se o usuário tem o perfil de administrador
+                return user.Perfis!.Any(p => p.Descricao.ToLower() == "admin");
+            }
+
+            // Caso o usuário não seja encontrado ou não tenha perfil de administrador
+            return false;
         }
 
         public List<UserViewModel> GetByEnderecoUF(string uf)
         {
-            
-           var users = _context.Users
-            .Where(u => u.Endereco!.Estado == uf)
-            .Select(u => new UserViewModel
-            {
-                UserId = u.UserId,
-                Name = u.Name,
-            })
-            .ToList();
+
+            var users = _context.Users
+             .Where(u => u.Endereco!.Estado == uf)
+             .Select(u => new UserViewModel
+             {
+                 UserId = u.UserId,
+                 Name = u.Name,
+             })
+             .ToList();
 
             return users;
         }
 
-        
+
         public List<UserViewModel> GetBySistemaId(int id)
         {
-           var users = _context.Users
-            .Where(u => u.Sistemas!.Any(s => s.SistemaId == id))
-            .Select(u => new UserViewModel
-            {
-                UserId = u.UserId,
-                Name = u.Name,
-            })
-            .ToList();
+            var users = _context.Users
+             .Where(u => u.Sistemas!.Any(s => s.SistemaId == id))
+             .Select(u => new UserViewModel
+             {
+                 UserId = u.UserId,
+                 Name = u.Name,
+             })
+             .ToList();
 
             return users;
         }
-         public List<UserViewModel> GetByPerfilId(int perfilId)
+        public List<UserViewModel> GetByPerfilId(int perfilId)
         {
-           var users = _context.Users
-            .Where(u => u.Perfis!.Any(s => s.PerfilId == perfilId))
-            .Select(u => new UserViewModel
-            {
-                UserId = u.UserId,
-                Name = u.Name,
-            })
-            .ToList();
+            var users = _context.Users
+             .Where(u => u.Perfis!.Any(s => s.PerfilId == perfilId))
+             .Select(u => new UserViewModel
+             {
+                 UserId = u.UserId,
+                 Name = u.Name,
+             })
+             .ToList();
 
             return users;
         }
 
         public void AdicionaPerfilAoUser(int userId, int perfilId)
         {
-            
+
             var _user = GetByDbId(userId);
             if (_user is null)
                 throw new UserNotFoundException();
