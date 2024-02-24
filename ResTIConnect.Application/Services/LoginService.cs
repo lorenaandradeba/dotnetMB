@@ -22,8 +22,11 @@ namespace ResTIConnect.Application.Services
         {
             string _token = "";
 
-            if (_userService.AutenticateUser(login.Email, login.Password))
-                  _token = _authService.GenerateJwtToken(login.Email, "User");
+            if (_userService.AutenticateUser(login.Email, login.Password)){
+                 bool isAdmin = _userService.IsUserAdmin(login.Email);
+                 _token = _authService.GenerateJwtToken(login.Email, isAdmin ? "Admin" : "User");
+            }
+                  
 
             if (_token != "")
             {
@@ -33,16 +36,6 @@ namespace ResTIConnect.Application.Services
                     Token = _token
                 };
             }
-            //TODO Depois que gerar o token JWT - retornar o LoginViewModel com o token 
-            // if (_token != "")
-            // {
-            //     return new LoginViewModel
-            //     {
-            //         Username = login.Username,
-            //         Token = _token
-            //     };
-            // }
-
             return null;
         }
     }

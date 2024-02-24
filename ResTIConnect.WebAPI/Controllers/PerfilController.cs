@@ -21,14 +21,14 @@ namespace ResTIConnect.WebAPI.Controllers
 
 
         [HttpGet("perfis")]
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         public IActionResult Get()
         {
             return Ok(Perfis);
         }
 
         [HttpGet("perfil/{id}")]
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         public IActionResult GetById(int id)
         {
             var perfil = _perfilService.GetById(id);
@@ -37,7 +37,7 @@ namespace ResTIConnect.WebAPI.Controllers
 
 
         [HttpPost("perfil")]
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         public IActionResult Post([FromBody] NewPerfilInputModel perfil)
         {
             _perfilService.Create(perfil);
@@ -47,7 +47,7 @@ namespace ResTIConnect.WebAPI.Controllers
         }
 
         [HttpPut("perfil/{id}")]
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         public IActionResult Put(int id, [FromBody] NewPerfilInputModel perfil)
         {
             if (_perfilService.GetById(id) == null)
@@ -57,7 +57,7 @@ namespace ResTIConnect.WebAPI.Controllers
         }
 
         [HttpDelete("perfil/{id}")]
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         public IActionResult Delete(int id)
         {
             if (_perfilService.GetById(id) == null)
