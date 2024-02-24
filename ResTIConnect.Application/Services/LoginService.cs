@@ -10,9 +10,38 @@ namespace ResTIConnect.Application.Services
 {
     public class LoginService : ILoginService
     {
+        private readonly IUserService _userService;
+        public LoginService(IUserService userService)
+        {
+            _userService = userService;
+        }
         public LoginViewModel? Authenticate(LoginInputModel login)
         {
-            throw new NotImplementedException();
+            string _token = "";
+
+            if (_userService.AutenticateUser(login.Email, login.Password))
+                _token = "autenticacao realizada com sucesso";
+
+
+            if (_token != "")
+            {
+                return new LoginViewModel
+                {
+                    Username = login.Email,
+                    Token = _token
+                };
+            }
+            //TODO Depois que gerar o token JWT - retornar o LoginViewModel com o token 
+            // if (_token != "")
+            // {
+            //     return new LoginViewModel
+            //     {
+            //         Username = login.Username,
+            //         Token = _token
+            //     };
+            // }
+
+            return null;
         }
     }
 }
