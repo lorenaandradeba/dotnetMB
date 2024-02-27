@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using MvcMovie.Auth;
 using MvcMovie.Data;
 using MvcMovie.Data.Security;
 using MvcMovie.Models;
@@ -8,10 +9,11 @@ namespace MvcMovie.Controllers;
 public class LoginController : Controller
 {
    private readonly MvcMovieContext _context;
-
-    public LoginController(MvcMovieContext context)
+   private readonly IAuthService _authService;
+    public LoginController(MvcMovieContext context, IAuthService authService)
     {
         _context = context;
+        _authService = authService;
     }
 
     // GET: Login/Index
@@ -29,10 +31,16 @@ public class LoginController : Controller
    {
       if (ModelState.IsValid)
       {
+         string _token = "";
          user.Password = Utils.HashPassword(user.Password ?? "");
          var userInDb = await _context.User.FirstOrDefaultAsync(u => u.Email == user.Email && u.Password == user.Password);
-         //if (userInDb.Email == user.Email)
-         return RedirectToAction("Index", "Home");
+         if (userInDb?.Email == user.Email){
+            _token = _authService.GenerateJwtToken(userInDb.Email, "user");
+            return RedirectToAction("Index", "Home", new { token = _token });
+         }
+         else{
+            return RedirectToAction("Index", "Login");
+         }
       }
       return View(user);
    }
