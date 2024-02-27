@@ -20,7 +20,6 @@ namespace MvcMovie.Controllers
         {
             _context = context;
         }
-    [Authorize]
         // GET: Movies
         public async Task<IActionResult> Index()
         {
