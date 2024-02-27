@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/lorena-andrade-santos/Documentos/modulo5/atividade/dotnetMB/MvcMovie.csproj": {}
+    "/home/lorena-andrade-santos/Documentos/atividadeTrilha/dotnetMB/MvcMovie.csproj": {}
   },
   "projects": {
-    "/home/lorena-andrade-santos/Documentos/modulo5/atividade/dotnetMB/MvcMovie.csproj": {
+    "/home/lorena-andrade-santos/Documentos/atividadeTrilha/dotnetMB/MvcMovie.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/lorena-andrade-santos/Documentos/modulo5/atividade/dotnetMB/MvcMovie.csproj",
+        "projectUniqueName": "/home/lorena-andrade-santos/Documentos/atividadeTrilha/dotnetMB/MvcMovie.csproj",
         "projectName": "MvcMovie",
-        "projectPath": "/home/lorena-andrade-santos/Documentos/modulo5/atividade/dotnetMB/MvcMovie.csproj",
+        "projectPath": "/home/lorena-andrade-santos/Documentos/atividadeTrilha/dotnetMB/MvcMovie.csproj",
         "packagesPath": "/home/lorena-andrade-santos/.nuget/packages/",
-        "outputPath": "/home/lorena-andrade-santos/Documentos/modulo5/atividade/dotnetMB/obj/",
+        "outputPath": "/home/lorena-andrade-santos/Documentos/atividadeTrilha/dotnetMB/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/lorena-andrade-santos/.nuget/NuGet/NuGet.Config"
@@ -38,6 +38,10 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[7.0.16, )"
+            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",

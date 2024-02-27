@@ -2,12 +2,13 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using dotnetMB.Models;
+using MvcMovie.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using MvcMovie.Data;
 using MvcMovie.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace MvcMovie.Controllers
 {
@@ -19,7 +20,7 @@ namespace MvcMovie.Controllers
         {
             _context = context;
         }
-
+    [Authorize]
         // GET: Movies
         public async Task<IActionResult> Index()
         {

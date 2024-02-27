@@ -1,5 +1,5 @@
 using System.ComponentModel.DataAnnotations;
-using dotnetMB.Models;
+using MvcMovie.Models;
 
 namespace MvcMovie.Models;
 

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using MvcMovie.Models;
 
-namespace dotnetMB.Models
+namespace MvcMovie.Models
 {
     public class Artist
     {

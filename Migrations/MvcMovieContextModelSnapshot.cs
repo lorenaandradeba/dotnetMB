@@ -80,7 +80,7 @@ namespace MvcMovie.Migrations
                     b.ToTable("User");
                 });
 
-            modelBuilder.Entity("dotnetMB.Models.Artist", b =>
+            modelBuilder.Entity("MvcMovie.Models.Artist", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -100,7 +100,7 @@ namespace MvcMovie.Migrations
                     b.ToTable("Artist");
                 });
 
-            modelBuilder.Entity("dotnetMB.Models.Studio", b =>
+            modelBuilder.Entity("MvcMovie.Models.Studio", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -122,7 +122,7 @@ namespace MvcMovie.Migrations
 
             modelBuilder.Entity("ArtistMovie", b =>
                 {
-                    b.HasOne("dotnetMB.Models.Artist", null)
+                    b.HasOne("MvcMovie.Models.Artist", null)
                         .WithMany()
                         .HasForeignKey("ArtistsId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -137,7 +137,7 @@ namespace MvcMovie.Migrations
 
             modelBuilder.Entity("MvcMovie.Models.Movie", b =>
                 {
-                    b.HasOne("dotnetMB.Models.Studio", "Studio")
+                    b.HasOne("MvcMovie.Models.Studio", "Studio")
                         .WithMany("Movies")
                         .HasForeignKey("StudioId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -146,7 +146,7 @@ namespace MvcMovie.Migrations
                     b.Navigation("Studio");
                 });
 
-            modelBuilder.Entity("dotnetMB.Models.Studio", b =>
+            modelBuilder.Entity("MvcMovie.Models.Studio", b =>
                 {
                     b.Navigation("Movies");
                 });

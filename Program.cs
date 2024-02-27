@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using MvcMovie.Auth;
 using MvcMovie.Data;
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,6 +13,8 @@ else
 {
     //TODO: configurar MySql
 }
+
+builder.Services.AddScoped<IAuthService, AuthService>();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
