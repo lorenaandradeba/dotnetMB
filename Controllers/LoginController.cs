@@ -36,7 +36,8 @@ public class LoginController : Controller
          var userInDb = await _context.User.FirstOrDefaultAsync(u => u.Email == user.Email && u.Password == user.Password);
          if (userInDb?.Email == user.Email){
             _token = _authService.GenerateJwtToken(userInDb.Email, "user");
-            return RedirectToAction("Index", "Home", new { token = _token });
+            Response.Cookies.Append("AuthToken", _token);
+            return RedirectToAction("Index", "Home");
          }
          else{
             return RedirectToAction("Index", "Login");
