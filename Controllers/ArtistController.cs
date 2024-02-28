@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -19,6 +20,7 @@ namespace MvcMovie.Controllers
             _context = context;
         }
 
+        [Authorize]
         // GET: Artist
         public async Task<IActionResult> Index()
         {
@@ -27,6 +29,7 @@ namespace MvcMovie.Controllers
                           Problem("Entity set 'MvcMovieContext.Artist'  is null.");
         }
 
+        [Authorize]
         // GET: Artist/Details/5
         public async Task<IActionResult> Details(int? id)
         {
@@ -45,6 +48,7 @@ namespace MvcMovie.Controllers
             return View(artist);
         }
 
+        [Authorize]
         // GET: Artist/Create
         public IActionResult Create()
         {
@@ -55,6 +59,7 @@ namespace MvcMovie.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
+        [Authorize]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Name,Bio,Site")] Artist artist)
         {
@@ -68,6 +73,7 @@ namespace MvcMovie.Controllers
         }
 
         // GET: Artist/Edit/5
+        [Authorize]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null || _context.Artist == null)
@@ -87,6 +93,7 @@ namespace MvcMovie.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
+        [Authorize]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Bio,Site")] Artist artist)
         {
@@ -119,6 +126,7 @@ namespace MvcMovie.Controllers
         }
 
         // GET: Artist/Delete/5
+        [Authorize]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null || _context.Artist == null)
@@ -137,6 +145,7 @@ namespace MvcMovie.Controllers
         }
 
         // POST: Artist/Delete/5
+        [Authorize]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)

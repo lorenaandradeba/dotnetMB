@@ -11,10 +11,13 @@ namespace dotnetMB.Middleware
     public class JwtTokenMiddleware
     {
     private readonly RequestDelegate _next;
+    private IConfiguration _configuration;
 
-    public JwtTokenMiddleware(RequestDelegate next)
+
+    public JwtTokenMiddleware(RequestDelegate next,  IConfiguration configuration)
     {
         _next = next;
+        _configuration = configuration;
     }
 
     public async Task Invoke(HttpContext context)
