@@ -21,22 +21,24 @@ else
 
 builder.Services.AddScoped<IAuthService, AuthService>();
 
-
-
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-    .AddJwtBearer(options =>
-    {
+builder.Services.AddAuthentication(x => {
+    x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+}).AddJwtBearer(options =>
+{
+        options.RequireHttpsMetadata = false;
+        options.SaveToken = true;
         options.TokenValidationParameters = new TokenValidationParameters
         {
-            ValidateIssuerSigningKey = true,
             IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes("Essa e a chave secreta do MvcMovie")),
             ValidateIssuer = false,
-            ValidateAudience = false
+            ValidateAudience = false,
+           
         };
-    });
-
+});
+builder.Services.AddAuthorization();
 var app = builder.Build();
 
 

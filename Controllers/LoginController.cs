@@ -36,7 +36,13 @@ public class LoginController : Controller
          var userInDb = await _context.User.FirstOrDefaultAsync(u => u.Email == user.Email && u.Password == user.Password);
          if (userInDb?.Email == user.Email){
             _token = _authService.GenerateJwtToken(userInDb.Email, "user");
-            Response.Cookies.Append("AuthToken", _token);
+            Response.Cookies.Append("AuthToken", _token, new CookieOptions
+            {
+                HttpOnly = true,
+                Secure = false, // Defina como true se estiver usando HTTPS
+                SameSite = SameSiteMode.Strict,
+                Expires = DateTime.UtcNow.AddHours(1), // Defina o tempo de expiração do cookie
+            });
             return RedirectToAction("Index", "Home");
          }
          else{

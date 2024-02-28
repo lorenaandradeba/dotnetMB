@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using MvcMovie.Models;
 
@@ -11,13 +12,15 @@ public class HomeController : Controller
     public HomeController(ILogger<HomeController> logger)
     {
         _logger = logger;
-    }
+     }
 
+    [Authorize]
     public IActionResult Index()
     {
+        var userName =User.Identity.Name ?? string.Empty;
         return View();
     }
-
+    [Authorize]
     public IActionResult Privacy()
     {
         return View();

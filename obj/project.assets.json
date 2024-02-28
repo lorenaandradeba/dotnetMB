@@ -11136,19 +11136,19 @@
     ]
   },
   "packageFolders": {
-    "/home/lores/.nuget/packages/": {}
+    "/home/daniel-oliveira-da-silva/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/lores/tic18/atividadeTrilha/dotnetMB/MvcMovie.csproj",
+      "projectUniqueName": "/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/MvcMovie.csproj",
       "projectName": "MvcMovie",
-      "projectPath": "/home/lores/tic18/atividadeTrilha/dotnetMB/MvcMovie.csproj",
-      "packagesPath": "/home/lores/.nuget/packages/",
-      "outputPath": "/home/lores/tic18/atividadeTrilha/dotnetMB/obj/",
+      "projectPath": "/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/MvcMovie.csproj",
+      "packagesPath": "/home/daniel-oliveira-da-silva/.nuget/packages/",
+      "outputPath": "/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/lores/.nuget/NuGet/NuGet.Config"
+        "/home/daniel-oliveira-da-silva/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
@@ -11220,7 +11220,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.114/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.116/RuntimeIdentifierGraph.json"
       }
     }
   }
