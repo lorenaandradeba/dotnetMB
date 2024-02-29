@@ -1,6 +1,9 @@
+using System.Text;
 using dotnetMB.Middleware;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.IdentityModel.Tokens;
 using MvcMovie.Auth;
 using MvcMovie.Data;
 var builder = WebApplication.CreateBuilder(args);
@@ -16,7 +19,23 @@ else
 }
 
 builder.Services.AddScoped<IAuthService, AuthService>();
-
+builder.Services.AddControllersWithViews();
+builder.Services.AddAuthentication(x => {
+    x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+}).AddJwtBearer(options =>
+{
+        options.RequireHttpsMetadata = false;
+        options.SaveToken = true;
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(builder.Configuration["Jwt:Key"])),
+            ValidateIssuer = false,
+            ValidateAudience = false,
+           
+        };
+});
+builder.Services.AddAuthorization();
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
@@ -39,6 +58,10 @@ app.UseRouting();
 
 app.UseAuthorization();
 
+app.MapControllerRoute(
+    name: "artist",
+    pattern: "artist/{action=Index}/{id?}",
+    defaults: new { controller = "Artist" });
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
