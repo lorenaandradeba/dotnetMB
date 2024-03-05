@@ -1,0 +1,24 @@
+/home/lores/tic18/p010/dotnetMB/Escambo.Dommain/bin/Debug/net7.0/Escambo.Dommain.deps.json
+/home/lores/tic18/p010/dotnetMB/Escambo.Dommain/bin/Debug/net7.0/Escambo.Dommain.dll
+/home/lores/tic18/p010/dotnetMB/Escambo.Dommain/bin/Debug/net7.0/Escambo.Dommain.pdb
+/home/lores/tic18/p010/dotnetMB/Escambo.Dommain/obj/Debug/net7.0/Escambo.Dommain.csproj.AssemblyReference.cache
+/home/lores/tic18/p010/dotnetMB/Escambo.Dommain/obj/Debug/net7.0/Escambo.Dommain.GeneratedMSBuildEditorConfig.editorconfig
+/home/lores/tic18/p010/dotnetMB/Escambo.Dommain/obj/Debug/net7.0/Escambo.Dommain.AssemblyInfoInputs.cache
+/home/lores/tic18/p010/dotnetMB/Escambo.Dommain/obj/Debug/net7.0/Escambo.Dommain.AssemblyInfo.cs
+/home/lores/tic18/p010/dotnetMB/Escambo.Dommain/obj/Debug/net7.0/Escambo.Dommain.csproj.CoreCompileInputs.cache
+/home/lores/tic18/p010/dotnetMB/Escambo.Dommain/obj/Debug/net7.0/Escambo.Dommain.dll
+/home/lores/tic18/p010/dotnetMB/Escambo.Dommain/obj/Debug/net7.0/refint/Escambo.Dommain.dll
+/home/lores/tic18/p010/dotnetMB/Escambo.Dommain/obj/Debug/net7.0/Escambo.Dommain.pdb
+/home/lores/tic18/p010/dotnetMB/Escambo.Dommain/obj/Debug/net7.0/ref/Escambo.Dommain.dll
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.Dommain/bin/Debug/net7.0/Escambo.Dommain.deps.json
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.Dommain/bin/Debug/net7.0/Escambo.Dommain.dll
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.Dommain/bin/Debug/net7.0/Escambo.Dommain.pdb
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.Dommain/obj/Debug/net7.0/Escambo.Dommain.csproj.AssemblyReference.cache
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.Dommain/obj/Debug/net7.0/Escambo.Dommain.GeneratedMSBuildEditorConfig.editorconfig
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.Dommain/obj/Debug/net7.0/Escambo.Dommain.AssemblyInfoInputs.cache
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.Dommain/obj/Debug/net7.0/Escambo.Dommain.AssemblyInfo.cs
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.Dommain/obj/Debug/net7.0/Escambo.Dommain.csproj.CoreCompileInputs.cache
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.Dommain/obj/Debug/net7.0/Escambo.Dommain.dll
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.Dommain/obj/Debug/net7.0/refint/Escambo.Dommain.dll
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.Dommain/obj/Debug/net7.0/Escambo.Dommain.pdb
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.Dommain/obj/Debug/net7.0/ref/Escambo.Dommain.dll
