@@ -1,0 +1,98 @@
+/home/lores/tic18/p010/dotnetMB/Escambo.WebAPI/bin/Debug/net7.0/appsettings.Development.json
+/home/lores/tic18/p010/dotnetMB/Escambo.WebAPI/bin/Debug/net7.0/appsettings.json
+/home/lores/tic18/p010/dotnetMB/Escambo.WebAPI/bin/Debug/net7.0/Escambo.WebAPI
+/home/lores/tic18/p010/dotnetMB/Escambo.WebAPI/bin/Debug/net7.0/Escambo.WebAPI.deps.json
+/home/lores/tic18/p010/dotnetMB/Escambo.WebAPI/bin/Debug/net7.0/Escambo.WebAPI.runtimeconfig.json
+/home/lores/tic18/p010/dotnetMB/Escambo.WebAPI/bin/Debug/net7.0/Escambo.WebAPI.dll
+/home/lores/tic18/p010/dotnetMB/Escambo.WebAPI/bin/Debug/net7.0/Escambo.WebAPI.pdb
+/home/lores/tic18/p010/dotnetMB/Escambo.WebAPI/bin/Debug/net7.0/Humanizer.dll
+/home/lores/tic18/p010/dotnetMB/Escambo.WebAPI/bin/Debug/net7.0/Microsoft.AspNetCore.OpenApi.dll
+/home/lores/tic18/p010/dotnetMB/Escambo.WebAPI/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.dll
+/home/lores/tic18/p010/dotnetMB/Escambo.WebAPI/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+/home/lores/tic18/p010/dotnetMB/Escambo.WebAPI/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.Design.dll
+/home/lores/tic18/p010/dotnetMB/Escambo.WebAPI/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.Relational.dll
+/home/lores/tic18/p010/dotnetMB/Escambo.WebAPI/bin/Debug/net7.0/Microsoft.Extensions.DependencyModel.dll
+/home/lores/tic18/p010/dotnetMB/Escambo.WebAPI/bin/Debug/net7.0/Microsoft.OpenApi.dll
+/home/lores/tic18/p010/dotnetMB/Escambo.WebAPI/bin/Debug/net7.0/Mono.TextTemplating.dll
+/home/lores/tic18/p010/dotnetMB/Escambo.WebAPI/bin/Debug/net7.0/MySqlConnector.dll
+/home/lores/tic18/p010/dotnetMB/Escambo.WebAPI/bin/Debug/net7.0/Pomelo.EntityFrameworkCore.MySql.dll
+/home/lores/tic18/p010/dotnetMB/Escambo.WebAPI/bin/Debug/net7.0/Swashbuckle.AspNetCore.Swagger.dll
+/home/lores/tic18/p010/dotnetMB/Escambo.WebAPI/bin/Debug/net7.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+/home/lores/tic18/p010/dotnetMB/Escambo.WebAPI/bin/Debug/net7.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+/home/lores/tic18/p010/dotnetMB/Escambo.WebAPI/bin/Debug/net7.0/System.CodeDom.dll
+/home/lores/tic18/p010/dotnetMB/Escambo.WebAPI/bin/Debug/net7.0/Escambo.Application.dll
+/home/lores/tic18/p010/dotnetMB/Escambo.WebAPI/bin/Debug/net7.0/Escambo.Dommain.dll
+/home/lores/tic18/p010/dotnetMB/Escambo.WebAPI/bin/Debug/net7.0/Escambo.Infra.dll
+/home/lores/tic18/p010/dotnetMB/Escambo.WebAPI/bin/Debug/net7.0/Escambo.Application.pdb
+/home/lores/tic18/p010/dotnetMB/Escambo.WebAPI/bin/Debug/net7.0/Escambo.Infra.pdb
+/home/lores/tic18/p010/dotnetMB/Escambo.WebAPI/bin/Debug/net7.0/Escambo.Dommain.pdb
+/home/lores/tic18/p010/dotnetMB/Escambo.WebAPI/obj/Debug/net7.0/Escambo.WebAPI.csproj.AssemblyReference.cache
+/home/lores/tic18/p010/dotnetMB/Escambo.WebAPI/obj/Debug/net7.0/Escambo.WebAPI.GeneratedMSBuildEditorConfig.editorconfig
+/home/lores/tic18/p010/dotnetMB/Escambo.WebAPI/obj/Debug/net7.0/Escambo.WebAPI.AssemblyInfoInputs.cache
+/home/lores/tic18/p010/dotnetMB/Escambo.WebAPI/obj/Debug/net7.0/Escambo.WebAPI.AssemblyInfo.cs
+/home/lores/tic18/p010/dotnetMB/Escambo.WebAPI/obj/Debug/net7.0/Escambo.WebAPI.csproj.CoreCompileInputs.cache
+/home/lores/tic18/p010/dotnetMB/Escambo.WebAPI/obj/Debug/net7.0/Escambo.WebAPI.MvcApplicationPartsAssemblyInfo.cs
+/home/lores/tic18/p010/dotnetMB/Escambo.WebAPI/obj/Debug/net7.0/Escambo.WebAPI.MvcApplicationPartsAssemblyInfo.cache
+/home/lores/tic18/p010/dotnetMB/Escambo.WebAPI/obj/Debug/net7.0/staticwebassets/msbuild.Escambo.WebAPI.Microsoft.AspNetCore.StaticWebAssets.props
+/home/lores/tic18/p010/dotnetMB/Escambo.WebAPI/obj/Debug/net7.0/staticwebassets/msbuild.build.Escambo.WebAPI.props
+/home/lores/tic18/p010/dotnetMB/Escambo.WebAPI/obj/Debug/net7.0/staticwebassets/msbuild.buildMultiTargeting.Escambo.WebAPI.props
+/home/lores/tic18/p010/dotnetMB/Escambo.WebAPI/obj/Debug/net7.0/staticwebassets/msbuild.buildTransitive.Escambo.WebAPI.props
+/home/lores/tic18/p010/dotnetMB/Escambo.WebAPI/obj/Debug/net7.0/staticwebassets.pack.json
+/home/lores/tic18/p010/dotnetMB/Escambo.WebAPI/obj/Debug/net7.0/staticwebassets.build.json
+/home/lores/tic18/p010/dotnetMB/Escambo.WebAPI/obj/Debug/net7.0/staticwebassets.development.json
+/home/lores/tic18/p010/dotnetMB/Escambo.WebAPI/obj/Debug/net7.0/scopedcss/bundle/Escambo.WebAPI.styles.css
+/home/lores/tic18/p010/dotnetMB/Escambo.WebAPI/obj/Debug/net7.0/Escambo.WebAPI.csproj.CopyComplete
+/home/lores/tic18/p010/dotnetMB/Escambo.WebAPI/obj/Debug/net7.0/Escambo.WebAPI.dll
+/home/lores/tic18/p010/dotnetMB/Escambo.WebAPI/obj/Debug/net7.0/refint/Escambo.WebAPI.dll
+/home/lores/tic18/p010/dotnetMB/Escambo.WebAPI/obj/Debug/net7.0/Escambo.WebAPI.pdb
+/home/lores/tic18/p010/dotnetMB/Escambo.WebAPI/obj/Debug/net7.0/Escambo.WebAPI.genruntimeconfig.cache
+/home/lores/tic18/p010/dotnetMB/Escambo.WebAPI/obj/Debug/net7.0/ref/Escambo.WebAPI.dll
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.WebAPI/bin/Debug/net7.0/appsettings.json
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.WebAPI/bin/Debug/net7.0/appsettings.Development.json
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.WebAPI/bin/Debug/net7.0/Escambo.WebAPI
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.WebAPI/bin/Debug/net7.0/Escambo.WebAPI.deps.json
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.WebAPI/bin/Debug/net7.0/Escambo.WebAPI.runtimeconfig.json
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.WebAPI/bin/Debug/net7.0/Escambo.WebAPI.dll
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.WebAPI/bin/Debug/net7.0/Escambo.WebAPI.pdb
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.WebAPI/bin/Debug/net7.0/Humanizer.dll
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.WebAPI/bin/Debug/net7.0/Microsoft.AspNetCore.OpenApi.dll
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.WebAPI/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.dll
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.WebAPI/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.WebAPI/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.Design.dll
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.WebAPI/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.Relational.dll
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.WebAPI/bin/Debug/net7.0/Microsoft.Extensions.DependencyModel.dll
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.WebAPI/bin/Debug/net7.0/Microsoft.OpenApi.dll
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.WebAPI/bin/Debug/net7.0/Mono.TextTemplating.dll
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.WebAPI/bin/Debug/net7.0/MySqlConnector.dll
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.WebAPI/bin/Debug/net7.0/Pomelo.EntityFrameworkCore.MySql.dll
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.WebAPI/bin/Debug/net7.0/Swashbuckle.AspNetCore.Swagger.dll
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.WebAPI/bin/Debug/net7.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.WebAPI/bin/Debug/net7.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.WebAPI/bin/Debug/net7.0/System.CodeDom.dll
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.WebAPI/bin/Debug/net7.0/Escambo.Application.dll
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.WebAPI/bin/Debug/net7.0/Escambo.Dommain.dll
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.WebAPI/bin/Debug/net7.0/Escambo.Infra.dll
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.WebAPI/bin/Debug/net7.0/Escambo.Application.pdb
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.WebAPI/bin/Debug/net7.0/Escambo.Infra.pdb
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.WebAPI/bin/Debug/net7.0/Escambo.Dommain.pdb
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.WebAPI/obj/Debug/net7.0/Escambo.WebAPI.csproj.AssemblyReference.cache
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.WebAPI/obj/Debug/net7.0/Escambo.WebAPI.GeneratedMSBuildEditorConfig.editorconfig
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.WebAPI/obj/Debug/net7.0/Escambo.WebAPI.AssemblyInfoInputs.cache
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.WebAPI/obj/Debug/net7.0/Escambo.WebAPI.AssemblyInfo.cs
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.WebAPI/obj/Debug/net7.0/Escambo.WebAPI.csproj.CoreCompileInputs.cache
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.WebAPI/obj/Debug/net7.0/Escambo.WebAPI.MvcApplicationPartsAssemblyInfo.cs
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.WebAPI/obj/Debug/net7.0/Escambo.WebAPI.MvcApplicationPartsAssemblyInfo.cache
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.WebAPI/obj/Debug/net7.0/staticwebassets/msbuild.Escambo.WebAPI.Microsoft.AspNetCore.StaticWebAssets.props
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.WebAPI/obj/Debug/net7.0/staticwebassets/msbuild.build.Escambo.WebAPI.props
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.WebAPI/obj/Debug/net7.0/staticwebassets/msbuild.buildMultiTargeting.Escambo.WebAPI.props
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.WebAPI/obj/Debug/net7.0/staticwebassets/msbuild.buildTransitive.Escambo.WebAPI.props
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.WebAPI/obj/Debug/net7.0/staticwebassets.pack.json
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.WebAPI/obj/Debug/net7.0/staticwebassets.build.json
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.WebAPI/obj/Debug/net7.0/staticwebassets.development.json
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.WebAPI/obj/Debug/net7.0/scopedcss/bundle/Escambo.WebAPI.styles.css
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.WebAPI/obj/Debug/net7.0/Escambo.WebAPI.csproj.CopyComplete
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.WebAPI/obj/Debug/net7.0/Escambo.WebAPI.dll
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.WebAPI/obj/Debug/net7.0/refint/Escambo.WebAPI.dll
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.WebAPI/obj/Debug/net7.0/Escambo.WebAPI.pdb
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.WebAPI/obj/Debug/net7.0/Escambo.WebAPI.genruntimeconfig.cache
+/home/daniel-oliveira-da-silva/Área de trabalho/dotnetMB/Escambo.WebAPI/obj/Debug/net7.0/ref/Escambo.WebAPI.dll

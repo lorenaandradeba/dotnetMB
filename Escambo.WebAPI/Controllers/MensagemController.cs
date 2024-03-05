@@ -34,5 +34,3 @@ public class MensagemController: Controller{
     public IActionResult Put(int id, [FromBody] Mensagem mensagem){
         return NoContent();
     }
-
-}

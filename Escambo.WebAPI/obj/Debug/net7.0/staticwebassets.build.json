@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "dm870SvQXBnj0BiB5G7qGhVTtIe9iHjHUkhui/pL+no=",
+  "Source": "Escambo.WebAPI",
+  "BasePath": "_content/Escambo.WebAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
